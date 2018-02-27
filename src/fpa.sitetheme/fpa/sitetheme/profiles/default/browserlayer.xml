@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="fpa.sitetheme"
+    interface="fpa.sitetheme.interfaces.IFpaSiteThemeLayer"
+  />
+</layers>

@@ -1,0 +1,2 @@
+graft fpa
+include *.cfg *.rst *.in
