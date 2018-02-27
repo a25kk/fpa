@@ -15,7 +15,7 @@
 
   var dataKey = 'plugin_hideShowPassword',
     shorthandArgs = ['show', 'innerToggle'],
-    fpaCE = 32,
+    SPACE = 32,
     ENTER = 13;
 
   var canSetInputAttribute = (function(){
@@ -260,11 +260,11 @@
                 break;
               case 'a':
                 if (testElement.filter('[href]').length) {
-                  keyCodes.push(fpaCE);
+                  keyCodes.push(SPACE);
                   break;
                 }
               default:
-                keyCodes.push(fpaCE, ENTER);
+                keyCodes.push(SPACE, ENTER);
                 break;
             }
           }

@@ -56,7 +56,7 @@ var logError = typeof console == 'undefined' ? function() {} :
 
 // ----- jQueryBridget ----- //
 
-function jQueryBridget( namefpace, PluginClass, $ ) {
+function jQueryBridget( namespace, PluginClass, $ ) {
   $ = $ || jQuery || window.jQuery;
   if ( !$ ) {
     return;
@@ -75,7 +75,7 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
   }
 
   // make jQuery plugin
-  $.fn[ namefpace ] = function( arg0 /*, arg1 */ ) {
+  $.fn[ namespace ] = function( arg0 /*, arg1 */ ) {
     if ( typeof arg0 == 'string' ) {
       // method call $().plugin( 'methodName', { options } )
       // shift arguments by 1
@@ -90,13 +90,13 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
   // $().plugin('methodName')
   function methodCall( $elems, methodName, args ) {
     var returnValue;
-    var pluginMethodStr = '$().' + namefpace + '("' + methodName + '")';
+    var pluginMethodStr = '$().' + namespace + '("' + methodName + '")';
 
     $elems.each( function( i, elem ) {
       // get instance
-      var instance = $.data( elem, namefpace );
+      var instance = $.data( elem, namespace );
       if ( !instance ) {
-        logError( namefpace + ' not initialized. Cannot call methods, i.e. ' +
+        logError( namespace + ' not initialized. Cannot call methods, i.e. ' +
           pluginMethodStr );
         return;
       }
@@ -118,7 +118,7 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
 
   function plainCall( $elems, options ) {
     $elems.each( function( i, elem ) {
-      var instance = $.data( elem, namefpace );
+      var instance = $.data( elem, namespace );
       if ( instance ) {
         // set options & init
         instance.option( options );
@@ -126,7 +126,7 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
       } else {
         // initialize new instance
         instance = new PluginClass( elem, options );
-        $.data( elem, namefpace, instance );
+        $.data( elem, namespace, instance );
       }
     });
   }
@@ -723,16 +723,16 @@ utils.toDashed = function( str ) {
 
 var console = window.console;
 /**
- * allow user to initialize classes via [data-namefpace] or .js-namefpace class
+ * allow user to initialize classes via [data-namespace] or .js-namespace class
  * htmlInit( Widget, 'widgetName' )
- * options are parsed from data-namefpace-options
+ * options are parsed from data-namespace-options
  */
-utils.htmlInit = function( WidgetClass, namefpace ) {
+utils.htmlInit = function( WidgetClass, namespace ) {
   utils.docReady( function() {
-    var dashedNamefpace = utils.toDashed( namefpace );
-    var dataAttr = 'data-' + dashedNamefpace;
+    var dashedNamespace = utils.toDashed( namespace );
+    var dataAttr = 'data-' + dashedNamespace;
     var dataAttrElems = document.querySelectorAll( '[' + dataAttr + ']' );
-    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamefpace );
+    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamespace );
     var elems = utils.makeArray( dataAttrElems )
       .concat( utils.makeArray( jsDashElems ) );
     var dataOptionsAttr = dataAttr + '-options';
@@ -754,9 +754,9 @@ utils.htmlInit = function( WidgetClass, namefpace ) {
       }
       // initialize
       var instance = new WidgetClass( elem, options );
-      // make available via $().data('namefpace')
+      // make available via $().data('namespace')
       if ( jQuery ) {
-        jQuery.data( elem, namefpace, instance );
+        jQuery.data( elem, namespace, instance );
       }
     });
 
@@ -1049,7 +1049,7 @@ proto.positionSlider = function() {
   if ( firstSlide ) {
     var positionX = -this.x - firstSlide.target;
     var progress = positionX / this.slidesWidth;
-    this.difpatchEvent( 'scroll', null, [ progress, positionX ] );
+    this.dispatchEvent( 'scroll', null, [ progress, positionX ] );
   }
 };
 
@@ -1082,7 +1082,7 @@ proto.settle = function( previousX ) {
     delete this.isFreeScrolling;
     // render position with translateX when settled
     this.positionSlider();
-    this.difpatchEvent('settle');
+    this.dispatchEvent('settle');
   }
 };
 
@@ -1259,7 +1259,7 @@ Flickity.defaults = {
   // contain: false,
   freeScrollFriction: 0.075, // friction when free-scrolling
   friction: 0.28, // friction when selecting
-  namefpaceJQueryEvents: true,
+  namespaceJQueryEvents: true,
   // initialIndex: 0,
   percentPosition: true,
   resize: true,
@@ -1636,13 +1636,13 @@ proto._containSlides = function() {
  * @param {Event} event - original event
  * @param {Array} args - extra arguments
  */
-proto.difpatchEvent = function( type, event, args ) {
+proto.dispatchEvent = function( type, event, args ) {
   var emitArgs = event ? [ event ].concat( args ) : args;
   this.emitEvent( type, emitArgs );
 
   if ( jQuery && this.$element ) {
     // default trigger with type if no event
-    type += this.options.namefpaceJQueryEvents ? '.flickity' : '';
+    type += this.options.namespaceJQueryEvents ? '.flickity' : '';
     var $event = type;
     if ( event ) {
       // create jQuery event
@@ -1686,9 +1686,9 @@ proto.select = function( index, isWrap, isInstant ) {
     this.setGallerySize();
   }
 
-  this.difpatchEvent('select');
+  this.dispatchEvent('select');
   // old v1 event name, remove in v3
-  this.difpatchEvent('cellSelect');
+  this.dispatchEvent('cellSelect');
 };
 
 // wraps position for wrapAround, to move to closest slide. #113
@@ -2728,7 +2728,7 @@ proto.pointerDown = function( event, pointer ) {
   this.pointerDownScroll = getScrollPosition();
   window.addEventListener( 'scroll', this );
 
-  this.difpatchEvent( 'pointerDown', event, [ pointer ] );
+  this.dispatchEvent( 'pointerDown', event, [ pointer ] );
 };
 
 proto.pointerDownFocus = function( event ) {
@@ -2774,7 +2774,7 @@ proto.hasDragStarted = function( moveVector ) {
 proto.pointerUp = function( event, pointer ) {
   delete this.isTouchScrolling;
   this.viewport.classList.remove('is-pointer-down');
-  this.difpatchEvent( 'pointerUp', event, [ pointer ] );
+  this.dispatchEvent( 'pointerUp', event, [ pointer ] );
   this._dragPointerUp( event, pointer );
 };
 
@@ -2789,12 +2789,12 @@ proto.dragStart = function( event, pointer ) {
   this.dragStartPosition = this.x;
   this.startAnimation();
   window.removeEventListener( 'scroll', this );
-  this.difpatchEvent( 'dragStart', event, [ pointer ] );
+  this.dispatchEvent( 'dragStart', event, [ pointer ] );
 };
 
 proto.pointerMove = function( event, pointer ) {
   var moveVector = this._dragPointerMove( event, pointer );
-  this.difpatchEvent( 'pointerMove', event, [ pointer, moveVector ] );
+  this.dispatchEvent( 'pointerMove', event, [ pointer, moveVector ] );
   this._dragMove( event, pointer, moveVector );
 };
 
@@ -2817,7 +2817,7 @@ proto.dragMove = function( event, pointer, moveVector ) {
   this.dragX = dragX;
 
   this.dragMoveTime = new Date();
-  this.difpatchEvent( 'dragMove', event, [ pointer, moveVector ] );
+  this.dispatchEvent( 'dragMove', event, [ pointer, moveVector ] );
 };
 
 proto.dragEnd = function( event, pointer ) {
@@ -2845,7 +2845,7 @@ proto.dragEnd = function( event, pointer ) {
   this.isDragSelect = this.options.wrapAround;
   this.select( index );
   delete this.isDragSelect;
-  this.difpatchEvent( 'dragEnd', event, [ pointer ] );
+  this.dispatchEvent( 'dragEnd', event, [ pointer ] );
 };
 
 proto.dragEndRestingSelect = function() {
@@ -2938,7 +2938,7 @@ proto.staticClick = function( event, pointer ) {
   var clickedCell = this.getParentCell( event.target );
   var cellElem = clickedCell && clickedCell.element;
   var cellIndex = clickedCell && this.cells.indexOf( clickedCell );
-  this.difpatchEvent( 'staticClick', event, [ pointer, cellElem, cellIndex ] );
+  this.dispatchEvent( 'staticClick', event, [ pointer, cellElem, cellIndex ] );
 };
 
 // ----- scroll ----- //
@@ -3551,8 +3551,8 @@ Player.prototype.play = function() {
     return;
   }
   // do not play if page is hidden, start playing when page is visible
-  var ifpageHidden = document[ hiddenProperty ];
-  if ( visibilityEvent && ifpageHidden ) {
+  var isPageHidden = document[ hiddenProperty ];
+  if ( visibilityEvent && isPageHidden ) {
     document.addEventListener( visibilityEvent, this.onVisibilityPlay );
     return;
   }
@@ -3613,8 +3613,8 @@ Player.prototype.unpause = function() {
 
 // pause if page visibility is hidden, unpause if visible
 Player.prototype.visibilityChange = function() {
-  var ifpageHidden = document[ hiddenProperty ];
-  this[ ifpageHidden ? 'pause' : 'unpause' ]();
+  var isPageHidden = document[ hiddenProperty ];
+  this[ isPageHidden ? 'pause' : 'unpause' ]();
 };
 
 Player.prototype.visibilityPlay = function() {
@@ -3988,7 +3988,7 @@ LazyLoader.prototype.complete = function( event, className ) {
   this.flickity.cellSizeChange( cellElem );
 
   this.img.classList.add( className );
-  this.flickity.difpatchEvent( 'lazyLoad', event, cellElem );
+  this.flickity.dispatchEvent( 'lazyLoad', event, cellElem );
 };
 
 // -----  ----- //

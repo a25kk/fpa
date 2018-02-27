@@ -149,9 +149,9 @@ $card-title-fpacers: (
     fpacer26: 13rem,
 );
 
-@each $card-fpacer, $fpacer-value in $card-title-fpacers {
+@each $card-fpacer, $spacer-value in $card-title-fpacers {
     .app-card-title-#{$card-fpacer} {
-        padding-right: $fpacer-value;
+        padding-right: $spacer-value;
     }
 }
 

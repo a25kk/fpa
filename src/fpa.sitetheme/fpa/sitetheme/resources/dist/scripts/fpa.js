@@ -577,18 +577,18 @@ var i,
 
 	// Regular expressions
 
-	// http://www.w3.org/TR/css3-selectors/#whitefpace
-	whitefpace = "[\\x20\\t\\r\\n\\f]",
+	// http://www.w3.org/TR/css3-selectors/#whitespace
+	whitespace = "[\\x20\\t\\r\\n\\f]",
 
 	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 	identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
 
 	// Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
-	attributes = "\\[" + whitefpace + "*(" + identifier + ")(?:" + whitefpace +
+	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
 		// Operator (capture 2)
-		"*([*^$|!~]?=)" + whitefpace +
+		"*([*^$|!~]?=)" + whitespace +
 		// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
-		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitefpace +
+		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitespace +
 		"*\\]",
 
 	pseudos = ":(" + identifier + ")(?:\\((" +
@@ -601,14 +601,14 @@ var i,
 		".*" +
 		")\\)|)",
 
-	// Leading and non-escaped trailing whitefpace, capturing some non-whitefpace characters preceding the latter
-	rwhitefpace = new RegExp( whitefpace + "+", "g" ),
-	rtrim = new RegExp( "^" + whitefpace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitefpace + "+$", "g" ),
+	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
+	rwhitespace = new RegExp( whitespace + "+", "g" ),
+	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
 
-	rcomma = new RegExp( "^" + whitefpace + "*," + whitefpace + "*" ),
-	rcombinators = new RegExp( "^" + whitefpace + "*([>+~]|" + whitefpace + ")" + whitefpace + "*" ),
+	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
+	rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
 
-	rattributeQuotes = new RegExp( "=" + whitefpace + "*([^\\]'\"]*?)" + whitefpace + "*\\]", "g" ),
+	rattributeQuotes = new RegExp( "=" + whitespace + "*([^\\]'\"]*?)" + whitespace + "*\\]", "g" ),
 
 	rpseudo = new RegExp( pseudos ),
 	ridentifier = new RegExp( "^" + identifier + "$" ),
@@ -619,14 +619,14 @@ var i,
 		"TAG": new RegExp( "^(" + identifier + "|[*])" ),
 		"ATTR": new RegExp( "^" + attributes ),
 		"PSEUDO": new RegExp( "^" + pseudos ),
-		"CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + whitefpace +
-			"*(even|odd|(([+-]|)(\\d*)n|)" + whitefpace + "*(?:([+-]|)" + whitefpace +
-			"*(\\d+)|))" + whitefpace + "*\\)|)", "i" ),
+		"CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + whitespace +
+			"*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" + whitespace +
+			"*(\\d+)|))" + whitespace + "*\\)|)", "i" ),
 		"bool": new RegExp( "^(?:" + booleans + ")$", "i" ),
 		// For use in libraries implementing .is()
 		// We use this for POS matching in `select`
-		"needsContext": new RegExp( "^" + whitefpace + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" +
-			whitefpace + "*((?:-\\d)?\\d*)" + whitefpace + "*\\)|)(?=[^-]|$)", "i" )
+		"needsContext": new RegExp( "^" + whitespace + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" +
+			whitespace + "*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
 	},
 
 	rinputs = /^(?:input|select|textarea|button)$/i,
@@ -641,13 +641,13 @@ var i,
 
 	// CSS escapes
 	// http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitefpace + "?|(" + whitefpace + ")|.)", "ig" ),
-	funescape = function( _, escaped, escapedWhitefpace ) {
+	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
+	funescape = function( _, escaped, escapedWhitespace ) {
 		var high = "0x" + escaped - 0x10000;
 		// NaN means non-codepoint
 		// Support: Firefox<24
 		// Workaround erroneous numeric interpretation of +"0x"
-		return high !== high || escapedWhitefpace ?
+		return high !== high || escapedWhitespace ?
 			escaped :
 			high < 0 ?
 				// BMP codepoint
@@ -855,7 +855,7 @@ function Sizzle( selector, context, results, seed ) {
 /**
  * Create key-value caches of limited size
  * @returns {function(string, object)} Returns the Object data after storing it on itself with
- *	property name the (fpace-suffixed) string and (if the cache is larger than Expr.cacheLength)
+ *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
  *	deleting the oldest entry
  */
 function createCache() {
@@ -1261,13 +1261,13 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// The test attribute must be unknown in Opera but "safe" for WinRT
 			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
 			if ( el.querySelectorAll("[msallowcapture^='']").length ) {
-				rbuggyQSA.push( "[*^$]=" + whitefpace + "*(?:''|\"\")" );
+				rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
 			}
 
 			// Support: IE8
 			// Boolean attributes and "value" are not treated correctly
 			if ( !el.querySelectorAll("[selected]").length ) {
-				rbuggyQSA.push( "\\[" + whitefpace + "*(?:value|" + booleans + ")" );
+				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
 
 			// Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
@@ -1303,7 +1303,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// Support: IE8
 			// Enforce case-sensitivity of name attribute
 			if ( el.querySelectorAll("[name=d]").length ) {
-				rbuggyQSA.push( "name" + whitefpace + "*[*^$|!~]?=" );
+				rbuggyQSA.push( "name" + whitespace + "*[*^$|!~]?=" );
 			}
 
 			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
@@ -1726,7 +1726,7 @@ Expr = Sizzle.selectors = {
 			var pattern = classCache[ className + " " ];
 
 			return pattern ||
-				(pattern = new RegExp( "(^|" + whitefpace + ")" + className + "(" + whitefpace + "|$)" )) &&
+				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
 				classCache( className, function( elem ) {
 					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
 				});
@@ -1750,7 +1750,7 @@ Expr = Sizzle.selectors = {
 					operator === "^=" ? check && result.indexOf( check ) === 0 :
 					operator === "*=" ? check && result.indexOf( check ) > -1 :
 					operator === "$=" ? check && result.slice( -check.length ) === check :
-					operator === "~=" ? ( " " + result.replace( rwhitefpace, " " ) + " " ).indexOf( check ) > -1 :
+					operator === "~=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
 					operator === "|=" ? result === check || result.slice( 0, check.length + 1 ) === check + "-" :
 					false;
 			};
@@ -1928,7 +1928,7 @@ Expr = Sizzle.selectors = {
 		"not": markFunction(function( selector ) {
 			// Trim the selector passed to compile
 			// to avoid treating leading and trailing
-			// fpaces as combinators
+			// spaces as combinators
 			var input = [],
 				results = [],
 				matcher = compile( selector.replace( rtrim, "$1" ) );
@@ -2166,7 +2166,7 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 			matched = match.shift();
 			tokens.push({
 				value: matched,
-				// Cast descendant combinators to fpace
+				// Cast descendant combinators to space
 				type: match[0].replace( rtrim, " " )
 			});
 			soFar = soFar.slice( matched.length );
@@ -3210,7 +3210,7 @@ function createOptions( options ) {
 /*
  * Create a callback list using the following parameters:
  *
- *	options: an optional list of fpace-separated options that will change how
+ *	options: an optional list of space-separated options that will change how
  *			the callback list behaves or a more traditional option object
  *
  * By default a callback list will act like an event callback list and can be
@@ -4116,7 +4116,7 @@ Data.prototype = {
 
 		if ( key !== undefined ) {
 
-			// Support array or fpace separated string of keys
+			// Support array or space separated string of keys
 			if ( Array.isArray( key ) ) {
 
 				// If key is an array of keys...
@@ -4125,8 +4125,8 @@ Data.prototype = {
 			} else {
 				key = camelCase( key );
 
-				// If a key with the fpaces exists, use it.
-				// Otherwise, create an array by matching non-whitefpace
+				// If a key with the spaces exists, use it.
+				// Otherwise, create an array by matching non-whitespace
 				key = key in cache ?
 					[ key ] :
 					( key.match( rnothtmlwhite ) || [] );
@@ -4868,7 +4868,7 @@ var documentElement = document.documentElement;
 var
 	rkeyEvent = /^key/,
 	rmouseEvent = /^(?:mouse|pointer|contextmenu|drag|drop)|click/,
-	rtypenamefpace = /^([^.]*)(?:\.(.+)|)/;
+	rtypenamespace = /^([^.]*)(?:\.(.+)|)/;
 
 function returnTrue() {
 	return true;
@@ -4959,7 +4959,7 @@ jQuery.event = {
 
 		var handleObjIn, eventHandle, tmp,
 			events, t, handleObj,
-			special, handlers, type, namefpaces, origType,
+			special, handlers, type, namespaces, origType,
 			elemData = dataPriv.get( elem );
 
 		// Don't attach events to noData or text/comment nodes (but allow plain objects)
@@ -4995,19 +4995,19 @@ jQuery.event = {
 				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
 				return typeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
-					jQuery.event.difpatch.apply( elem, arguments ) : undefined;
+					jQuery.event.dispatch.apply( elem, arguments ) : undefined;
 			};
 		}
 
-		// Handle multiple events separated by a fpace
+		// Handle multiple events separated by a space
 		types = ( types || "" ).match( rnothtmlwhite ) || [ "" ];
 		t = types.length;
 		while ( t-- ) {
-			tmp = rtypenamefpace.exec( types[ t ] ) || [];
+			tmp = rtypenamespace.exec( types[ t ] ) || [];
 			type = origType = tmp[ 1 ];
-			namefpaces = ( tmp[ 2 ] || "" ).split( "." ).sort();
+			namespaces = ( tmp[ 2 ] || "" ).split( "." ).sort();
 
-			// There *must* be a type, no attaching namefpace-only handlers
+			// There *must* be a type, no attaching namespace-only handlers
 			if ( !type ) {
 				continue;
 			}
@@ -5030,7 +5030,7 @@ jQuery.event = {
 				guid: handler.guid,
 				selector: selector,
 				needsContext: selector && jQuery.expr.match.needsContext.test( selector ),
-				namefpace: namefpaces.join( "." )
+				namespace: namespaces.join( "." )
 			}, handleObjIn );
 
 			// Init the event handler queue if we're the first
@@ -5040,7 +5040,7 @@ jQuery.event = {
 
 				// Only use addEventListener if the special events handler returns false
 				if ( !special.setup ||
-					special.setup.call( elem, data, namefpaces, eventHandle ) === false ) {
+					special.setup.call( elem, data, namespaces, eventHandle ) === false ) {
 
 					if ( elem.addEventListener ) {
 						elem.addEventListener( type, eventHandle );
@@ -5074,22 +5074,22 @@ jQuery.event = {
 
 		var j, origCount, tmp,
 			events, t, handleObj,
-			special, handlers, type, namefpaces, origType,
+			special, handlers, type, namespaces, origType,
 			elemData = dataPriv.hasData( elem ) && dataPriv.get( elem );
 
 		if ( !elemData || !( events = elemData.events ) ) {
 			return;
 		}
 
-		// Once for each type.namefpace in types; type may be omitted
+		// Once for each type.namespace in types; type may be omitted
 		types = ( types || "" ).match( rnothtmlwhite ) || [ "" ];
 		t = types.length;
 		while ( t-- ) {
-			tmp = rtypenamefpace.exec( types[ t ] ) || [];
+			tmp = rtypenamespace.exec( types[ t ] ) || [];
 			type = origType = tmp[ 1 ];
-			namefpaces = ( tmp[ 2 ] || "" ).split( "." ).sort();
+			namespaces = ( tmp[ 2 ] || "" ).split( "." ).sort();
 
-			// Unbind all events (on this namefpace, if provided) for the element
+			// Unbind all events (on this namespace, if provided) for the element
 			if ( !type ) {
 				for ( type in events ) {
 					jQuery.event.remove( elem, type + types[ t ], handler, selector, true );
@@ -5101,7 +5101,7 @@ jQuery.event = {
 			type = ( selector ? special.delegateType : special.bindType ) || type;
 			handlers = events[ type ] || [];
 			tmp = tmp[ 2 ] &&
-				new RegExp( "(^|\\.)" + namefpaces.join( "\\.(?:.*\\.|)" ) + "(\\.|$)" );
+				new RegExp( "(^|\\.)" + namespaces.join( "\\.(?:.*\\.|)" ) + "(\\.|$)" );
 
 			// Remove matching events
 			origCount = j = handlers.length;
@@ -5110,7 +5110,7 @@ jQuery.event = {
 
 				if ( ( mappedTypes || origType === handleObj.origType ) &&
 					( !handler || handler.guid === handleObj.guid ) &&
-					( !tmp || tmp.test( handleObj.namefpace ) ) &&
+					( !tmp || tmp.test( handleObj.namespace ) ) &&
 					( !selector || selector === handleObj.selector ||
 						selector === "**" && handleObj.selector ) ) {
 					handlers.splice( j, 1 );
@@ -5128,7 +5128,7 @@ jQuery.event = {
 			// (avoids potential for endless recursion during removal of special event handlers)
 			if ( origCount && !handlers.length ) {
 				if ( !special.teardown ||
-					special.teardown.call( elem, namefpaces, elemData.handle ) === false ) {
+					special.teardown.call( elem, namespaces, elemData.handle ) === false ) {
 
 					jQuery.removeEvent( elem, type, elemData.handle );
 				}
@@ -5143,7 +5143,7 @@ jQuery.event = {
 		}
 	},
 
-	difpatch: function( nativeEvent ) {
+	dispatch: function( nativeEvent ) {
 
 		// Make a writable jQuery.Event from the native event object
 		var event = jQuery.event.fix( nativeEvent );
@@ -5162,8 +5162,8 @@ jQuery.event = {
 
 		event.delegateTarget = this;
 
-		// Call the preDifpatch hook for the mapped type, and let it bail if desired
-		if ( special.preDifpatch && special.preDifpatch.call( this, event ) === false ) {
+		// Call the preDispatch hook for the mapped type, and let it bail if desired
+		if ( special.preDispatch && special.preDispatch.call( this, event ) === false ) {
 			return;
 		}
 
@@ -5179,9 +5179,9 @@ jQuery.event = {
 			while ( ( handleObj = matched.handlers[ j++ ] ) &&
 				!event.isImmediatePropagationStopped() ) {
 
-				// Triggered event must either 1) have no namefpace, or 2) have namefpace(s)
-				// a subset or equal to those in the bound event (both can have no namefpace).
-				if ( !event.rnamefpace || event.rnamefpace.test( handleObj.namefpace ) ) {
+				// Triggered event must either 1) have no namespace, or 2) have namespace(s)
+				// a subset or equal to those in the bound event (both can have no namespace).
+				if ( !event.rnamespace || event.rnamespace.test( handleObj.namespace ) ) {
 
 					event.handleObj = handleObj;
 					event.data = handleObj.data;
@@ -5199,9 +5199,9 @@ jQuery.event = {
 			}
 		}
 
-		// Call the postDifpatch hook for the mapped type
-		if ( special.postDifpatch ) {
-			special.postDifpatch.call( this, event );
+		// Call the postDispatch hook for the mapped type
+		if ( special.postDispatch ) {
+			special.postDispatch.call( this, event );
 		}
 
 		return event.result;
@@ -5342,7 +5342,7 @@ jQuery.event = {
 		},
 
 		beforeunload: {
-			postDifpatch: function( event ) {
+			postDispatch: function( event ) {
 
 				// Support: Firefox 20+
 				// Firefox doesn't alert if the returnValue field is not set.
@@ -5560,11 +5560,11 @@ jQuery.fn.extend( {
 		var handleObj, type;
 		if ( types && types.preventDefault && types.handleObj ) {
 
-			// ( event )  difpatched jQuery.Event
+			// ( event )  dispatched jQuery.Event
 			handleObj = types.handleObj;
 			jQuery( types.delegateTarget ).off(
-				handleObj.namefpace ?
-					handleObj.origType + "." + handleObj.namefpace :
+				handleObj.namespace ?
+					handleObj.origType + "." + handleObj.namespace :
 					handleObj.origType,
 				handleObj.selector,
 				handleObj.handler
@@ -6239,7 +6239,7 @@ var
 	rcustomProp = /^--/,
 	cssShow = { position: "absolute", visibility: "hidden", display: "block" },
 	cssNormalTransform = {
-		letterfpacing: "0",
+		letterSpacing: "0",
 		fontWeight: "400"
 	},
 
@@ -7600,7 +7600,7 @@ jQuery.extend( {
 		var name,
 			i = 0,
 
-			// Attribute names can contain non-HTML whitefpace characters
+			// Attribute names can contain non-HTML whitespace characters
 			// https://html.spec.whatwg.org/multipage/syntax.html#attributes-2
 			attrNames = value && value.match( rnothtmlwhite );
 
@@ -7772,10 +7772,10 @@ jQuery.each( [
 	"tabIndex",
 	"readOnly",
 	"maxLength",
-	"cellfpacing",
+	"cellSpacing",
 	"cellPadding",
-	"rowfpan",
-	"colfpan",
+	"rowSpan",
+	"colSpan",
 	"useMap",
 	"frameBorder",
 	"contentEditable"
@@ -7786,8 +7786,8 @@ jQuery.each( [
 
 
 
-	// Strip and collapse whitefpace according to HTML spec
-	// https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitefpace
+	// Strip and collapse whitespace according to HTML spec
+	// https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace
 	function stripAndCollapse( value ) {
 		var tokens = value.match( rnothtmlwhite ) || [];
 		return tokens.join( " " );
@@ -7920,7 +7920,7 @@ jQuery.fn.extend( {
 
 				while ( ( className = classNames[ i++ ] ) ) {
 
-					// Check each className given, fpace separated list
+					// Check each className given, space separated list
 					if ( self.hasClass( className ) ) {
 						self.removeClass( className );
 					} else {
@@ -8053,8 +8053,8 @@ jQuery.extend( {
 
 					// Support: IE <=10 - 11 only
 					// option.text throws exceptions (#14686, #14858)
-					// Strip and collapse whitefpace
-					// https://html.spec.whatwg.org/#strip-and-collapse-whitefpace
+					// Strip and collapse whitespace
+					// https://html.spec.whatwg.org/#strip-and-collapse-whitespace
 					stripAndCollapse( jQuery.text( elem ) );
 			}
 		},
@@ -8170,7 +8170,7 @@ jQuery.extend( jQuery.event, {
 		var i, cur, tmp, bubbleType, ontype, handle, special, lastElement,
 			eventPath = [ elem || document ],
 			type = hasOwn.call( event, "type" ) ? event.type : event,
-			namefpaces = hasOwn.call( event, "namefpace" ) ? event.namefpace.split( "." ) : [];
+			namespaces = hasOwn.call( event, "namespace" ) ? event.namespace.split( "." ) : [];
 
 		cur = lastElement = tmp = elem = elem || document;
 
@@ -8186,10 +8186,10 @@ jQuery.extend( jQuery.event, {
 
 		if ( type.indexOf( "." ) > -1 ) {
 
-			// Namefpaced trigger; create a regexp to match event type in handle()
-			namefpaces = type.split( "." );
-			type = namefpaces.shift();
-			namefpaces.sort();
+			// Namespaced trigger; create a regexp to match event type in handle()
+			namespaces = type.split( "." );
+			type = namespaces.shift();
+			namespaces.sort();
 		}
 		ontype = type.indexOf( ":" ) < 0 && "on" + type;
 
@@ -8200,9 +8200,9 @@ jQuery.extend( jQuery.event, {
 
 		// Trigger bitmask: & 1 for native handlers; & 2 for jQuery (always true)
 		event.isTrigger = onlyHandlers ? 2 : 3;
-		event.namefpace = namefpaces.join( "." );
-		event.rnamefpace = event.namefpace ?
-			new RegExp( "(^|\\.)" + namefpaces.join( "\\.(?:.*\\.|)" ) + "(\\.|$)" ) :
+		event.namespace = namespaces.join( "." );
+		event.rnamespace = event.namespace ?
+			new RegExp( "(^|\\.)" + namespaces.join( "\\.(?:.*\\.|)" ) + "(\\.|$)" ) :
 			null;
 
 		// Clean up the event in case it is being reused
@@ -8858,7 +8858,7 @@ jQuery.extend( {
 		},
 
 		// Data converters
-		// Keys separate source (or catchall "*") and destination types with a single fpace
+		// Keys separate source (or catchall "*") and destination types with a single space
 		converters: {
 
 			// Convert anything to text
@@ -8930,7 +8930,7 @@ jQuery.extend( {
 			// Request state (becomes false upon send and true upon completion)
 			completed,
 
-			// To know if global events are to be difpatched
+			// To know if global events are to be dispatched
 			fireGlobals,
 
 			// Loop variable
@@ -10243,7 +10243,7 @@ jQuery.fn.extend( {
 	},
 	undelegate: function( selector, types, fn ) {
 
-		// ( namefpace ) or ( selector, types [, fn] )
+		// ( namespace ) or ( selector, types [, fn] )
 		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
@@ -10660,7 +10660,7 @@ if (typeof window !== 'undefined' && window.jQuery) {
         return text;
       }
       function setState () {
-        // change fpan.placeHolder to fpan.placeHolder.active
+        // change span.placeHolder to span.placeHolder.active
         var currentValue = $el.val();
 
         if (currentValue == null) {
@@ -10692,7 +10692,7 @@ if (typeof window !== 'undefined' && window.jQuery) {
       var $el = $(this).wrap('<div class=jvFloat>');
       var forId = $el.attr('id');
       if (!forId) { forId = createIdOnElement($el);}
-      // Store the placeholder text in fpan.placeHolder
+      // Store the placeholder text in span.placeHolder
       // added `required` input detection and state
       var required = $el.attr('required') || '';
       
@@ -10706,7 +10706,7 @@ if (typeof window !== 'undefined' && window.jQuery) {
       } else {
         placeholder = $('<label class="placeHolder ' + required + '" for="' + forId + '">' + placeholderText + '</label>').insertBefore($el);
       }
-      // checks to see if inputs are pre-populated and adds active to fpan.placeholder
+      // checks to see if inputs are pre-populated and adds active to span.placeholder
       setState();
       $el.bind('keyup blur', setState);
     });
@@ -10731,7 +10731,7 @@ if (typeof window !== 'undefined' && window.jQuery) {
 
   var dataKey = 'plugin_hideShowPassword',
     shorthandArgs = ['show', 'innerToggle'],
-    fpaCE = 32,
+    SPACE = 32,
     ENTER = 13;
 
   var canSetInputAttribute = (function(){
@@ -10976,11 +10976,11 @@ if (typeof window !== 'undefined' && window.jQuery) {
                 break;
               case 'a':
                 if (testElement.filter('[href]').length) {
-                  keyCodes.push(fpaCE);
+                  keyCodes.push(SPACE);
                   break;
                 }
               default:
-                keyCodes.push(fpaCE, ENTER);
+                keyCodes.push(SPACE, ENTER);
                 break;
             }
           }
@@ -11257,7 +11257,7 @@ if (typeof window !== 'undefined' && window.jQuery) {
 
 		event.initCustomEvent(name, !noBubbles, !noCancelable, detail || {});
 
-		elem.difpatchEvent(event);
+		elem.dispatchEvent(event);
 		return event;
 	};
 
@@ -12185,7 +12185,7 @@ var logError = typeof console == 'undefined' ? function() {} :
 
 // ----- jQueryBridget ----- //
 
-function jQueryBridget( namefpace, PluginClass, $ ) {
+function jQueryBridget( namespace, PluginClass, $ ) {
   $ = $ || jQuery || window.jQuery;
   if ( !$ ) {
     return;
@@ -12204,7 +12204,7 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
   }
 
   // make jQuery plugin
-  $.fn[ namefpace ] = function( arg0 /*, arg1 */ ) {
+  $.fn[ namespace ] = function( arg0 /*, arg1 */ ) {
     if ( typeof arg0 == 'string' ) {
       // method call $().plugin( 'methodName', { options } )
       // shift arguments by 1
@@ -12219,13 +12219,13 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
   // $().plugin('methodName')
   function methodCall( $elems, methodName, args ) {
     var returnValue;
-    var pluginMethodStr = '$().' + namefpace + '("' + methodName + '")';
+    var pluginMethodStr = '$().' + namespace + '("' + methodName + '")';
 
     $elems.each( function( i, elem ) {
       // get instance
-      var instance = $.data( elem, namefpace );
+      var instance = $.data( elem, namespace );
       if ( !instance ) {
-        logError( namefpace + ' not initialized. Cannot call methods, i.e. ' +
+        logError( namespace + ' not initialized. Cannot call methods, i.e. ' +
           pluginMethodStr );
         return;
       }
@@ -12247,7 +12247,7 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
 
   function plainCall( $elems, options ) {
     $elems.each( function( i, elem ) {
-      var instance = $.data( elem, namefpace );
+      var instance = $.data( elem, namespace );
       if ( instance ) {
         // set options & init
         instance.option( options );
@@ -12255,7 +12255,7 @@ function jQueryBridget( namefpace, PluginClass, $ ) {
       } else {
         // initialize new instance
         instance = new PluginClass( elem, options );
-        $.data( elem, namefpace, instance );
+        $.data( elem, namespace, instance );
       }
     });
   }
@@ -12852,16 +12852,16 @@ utils.toDashed = function( str ) {
 
 var console = window.console;
 /**
- * allow user to initialize classes via [data-namefpace] or .js-namefpace class
+ * allow user to initialize classes via [data-namespace] or .js-namespace class
  * htmlInit( Widget, 'widgetName' )
- * options are parsed from data-namefpace-options
+ * options are parsed from data-namespace-options
  */
-utils.htmlInit = function( WidgetClass, namefpace ) {
+utils.htmlInit = function( WidgetClass, namespace ) {
   utils.docReady( function() {
-    var dashedNamefpace = utils.toDashed( namefpace );
-    var dataAttr = 'data-' + dashedNamefpace;
+    var dashedNamespace = utils.toDashed( namespace );
+    var dataAttr = 'data-' + dashedNamespace;
     var dataAttrElems = document.querySelectorAll( '[' + dataAttr + ']' );
-    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamefpace );
+    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamespace );
     var elems = utils.makeArray( dataAttrElems )
       .concat( utils.makeArray( jsDashElems ) );
     var dataOptionsAttr = dataAttr + '-options';
@@ -12883,9 +12883,9 @@ utils.htmlInit = function( WidgetClass, namefpace ) {
       }
       // initialize
       var instance = new WidgetClass( elem, options );
-      // make available via $().data('namefpace')
+      // make available via $().data('namespace')
       if ( jQuery ) {
-        jQuery.data( elem, namefpace, instance );
+        jQuery.data( elem, namespace, instance );
       }
     });
 
@@ -13178,7 +13178,7 @@ proto.positionSlider = function() {
   if ( firstSlide ) {
     var positionX = -this.x - firstSlide.target;
     var progress = positionX / this.slidesWidth;
-    this.difpatchEvent( 'scroll', null, [ progress, positionX ] );
+    this.dispatchEvent( 'scroll', null, [ progress, positionX ] );
   }
 };
 
@@ -13211,7 +13211,7 @@ proto.settle = function( previousX ) {
     delete this.isFreeScrolling;
     // render position with translateX when settled
     this.positionSlider();
-    this.difpatchEvent('settle');
+    this.dispatchEvent('settle');
   }
 };
 
@@ -13388,7 +13388,7 @@ Flickity.defaults = {
   // contain: false,
   freeScrollFriction: 0.075, // friction when free-scrolling
   friction: 0.28, // friction when selecting
-  namefpaceJQueryEvents: true,
+  namespaceJQueryEvents: true,
   // initialIndex: 0,
   percentPosition: true,
   resize: true,
@@ -13765,13 +13765,13 @@ proto._containSlides = function() {
  * @param {Event} event - original event
  * @param {Array} args - extra arguments
  */
-proto.difpatchEvent = function( type, event, args ) {
+proto.dispatchEvent = function( type, event, args ) {
   var emitArgs = event ? [ event ].concat( args ) : args;
   this.emitEvent( type, emitArgs );
 
   if ( jQuery && this.$element ) {
     // default trigger with type if no event
-    type += this.options.namefpaceJQueryEvents ? '.flickity' : '';
+    type += this.options.namespaceJQueryEvents ? '.flickity' : '';
     var $event = type;
     if ( event ) {
       // create jQuery event
@@ -13815,9 +13815,9 @@ proto.select = function( index, isWrap, isInstant ) {
     this.setGallerySize();
   }
 
-  this.difpatchEvent('select');
+  this.dispatchEvent('select');
   // old v1 event name, remove in v3
-  this.difpatchEvent('cellSelect');
+  this.dispatchEvent('cellSelect');
 };
 
 // wraps position for wrapAround, to move to closest slide. #113
@@ -14857,7 +14857,7 @@ proto.pointerDown = function( event, pointer ) {
   this.pointerDownScroll = getScrollPosition();
   window.addEventListener( 'scroll', this );
 
-  this.difpatchEvent( 'pointerDown', event, [ pointer ] );
+  this.dispatchEvent( 'pointerDown', event, [ pointer ] );
 };
 
 proto.pointerDownFocus = function( event ) {
@@ -14903,7 +14903,7 @@ proto.hasDragStarted = function( moveVector ) {
 proto.pointerUp = function( event, pointer ) {
   delete this.isTouchScrolling;
   this.viewport.classList.remove('is-pointer-down');
-  this.difpatchEvent( 'pointerUp', event, [ pointer ] );
+  this.dispatchEvent( 'pointerUp', event, [ pointer ] );
   this._dragPointerUp( event, pointer );
 };
 
@@ -14918,12 +14918,12 @@ proto.dragStart = function( event, pointer ) {
   this.dragStartPosition = this.x;
   this.startAnimation();
   window.removeEventListener( 'scroll', this );
-  this.difpatchEvent( 'dragStart', event, [ pointer ] );
+  this.dispatchEvent( 'dragStart', event, [ pointer ] );
 };
 
 proto.pointerMove = function( event, pointer ) {
   var moveVector = this._dragPointerMove( event, pointer );
-  this.difpatchEvent( 'pointerMove', event, [ pointer, moveVector ] );
+  this.dispatchEvent( 'pointerMove', event, [ pointer, moveVector ] );
   this._dragMove( event, pointer, moveVector );
 };
 
@@ -14946,7 +14946,7 @@ proto.dragMove = function( event, pointer, moveVector ) {
   this.dragX = dragX;
 
   this.dragMoveTime = new Date();
-  this.difpatchEvent( 'dragMove', event, [ pointer, moveVector ] );
+  this.dispatchEvent( 'dragMove', event, [ pointer, moveVector ] );
 };
 
 proto.dragEnd = function( event, pointer ) {
@@ -14974,7 +14974,7 @@ proto.dragEnd = function( event, pointer ) {
   this.isDragSelect = this.options.wrapAround;
   this.select( index );
   delete this.isDragSelect;
-  this.difpatchEvent( 'dragEnd', event, [ pointer ] );
+  this.dispatchEvent( 'dragEnd', event, [ pointer ] );
 };
 
 proto.dragEndRestingSelect = function() {
@@ -15067,7 +15067,7 @@ proto.staticClick = function( event, pointer ) {
   var clickedCell = this.getParentCell( event.target );
   var cellElem = clickedCell && clickedCell.element;
   var cellIndex = clickedCell && this.cells.indexOf( clickedCell );
-  this.difpatchEvent( 'staticClick', event, [ pointer, cellElem, cellIndex ] );
+  this.dispatchEvent( 'staticClick', event, [ pointer, cellElem, cellIndex ] );
 };
 
 // ----- scroll ----- //
@@ -15680,8 +15680,8 @@ Player.prototype.play = function() {
     return;
   }
   // do not play if page is hidden, start playing when page is visible
-  var ifpageHidden = document[ hiddenProperty ];
-  if ( visibilityEvent && ifpageHidden ) {
+  var isPageHidden = document[ hiddenProperty ];
+  if ( visibilityEvent && isPageHidden ) {
     document.addEventListener( visibilityEvent, this.onVisibilityPlay );
     return;
   }
@@ -15742,8 +15742,8 @@ Player.prototype.unpause = function() {
 
 // pause if page visibility is hidden, unpause if visible
 Player.prototype.visibilityChange = function() {
-  var ifpageHidden = document[ hiddenProperty ];
-  this[ ifpageHidden ? 'pause' : 'unpause' ]();
+  var isPageHidden = document[ hiddenProperty ];
+  this[ isPageHidden ? 'pause' : 'unpause' ]();
 };
 
 Player.prototype.visibilityPlay = function() {
@@ -16117,7 +16117,7 @@ LazyLoader.prototype.complete = function( event, className ) {
   this.flickity.cellSizeChange( cellElem );
 
   this.img.classList.add( className );
-  this.flickity.difpatchEvent( 'lazyLoad', event, cellElem );
+  this.flickity.dispatchEvent( 'lazyLoad', event, cellElem );
 };
 
 // -----  ----- //

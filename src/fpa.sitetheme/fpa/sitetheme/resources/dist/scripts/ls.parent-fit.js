@@ -44,7 +44,7 @@
 			var css = getCSS(element);
 			var content = css.content || css.fontFamily;
 			var obj = {
-				fit: element._lazysizefparentFit || element.getAttribute('data-parent-fit')
+				fit: element._lazysizesParentFit || element.getAttribute('data-parent-fit')
 			};
 
 			if(!obj.fit && content && (tmpMatch = content.match(regCssFit))){
@@ -52,7 +52,7 @@
 			}
 
 			if(obj.fit){
-				parentObj = element._lazysizefparentContainer || element.getAttribute('data-parent-container');
+				parentObj = element._lazysizesParentContainer || element.getAttribute('data-parent-container');
 
 				if(!parentObj && content && (tmpMatch = content.match(regCssObject))){
 					parentObj = tmpMatch[1];

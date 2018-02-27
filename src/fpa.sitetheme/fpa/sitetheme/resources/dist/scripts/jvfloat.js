@@ -20,7 +20,7 @@
         return text;
       }
       function setState () {
-        // change fpan.placeHolder to fpan.placeHolder.active
+        // change span.placeHolder to span.placeHolder.active
         var currentValue = $el.val();
 
         if (currentValue == null) {
@@ -52,7 +52,7 @@
       var $el = $(this).wrap('<div class=jvFloat>');
       var forId = $el.attr('id');
       if (!forId) { forId = createIdOnElement($el);}
-      // Store the placeholder text in fpan.placeHolder
+      // Store the placeholder text in span.placeHolder
       // added `required` input detection and state
       var required = $el.attr('required') || '';
       
@@ -66,7 +66,7 @@
       } else {
         placeholder = $('<label class="placeHolder ' + required + '" for="' + forId + '">' + placeholderText + '</label>').insertBefore($el);
       }
-      // checks to see if inputs are pre-populated and adds active to fpan.placeholder
+      // checks to see if inputs are pre-populated and adds active to span.placeholder
       setState();
       $el.bind('keyup blur', setState);
     });

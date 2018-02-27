@@ -6,7 +6,7 @@
 //== Colors
 //
 //## Brand colors used across the project
-$color-thunderbird:             rgba(16,39,91,1) !default; // #CC3517
+$color-thunderbird:             rgba(231,81,19,1) !default; // #e75113
 
 $color-powderblue:              rgba(158,5,14,1) !default; // #B0E0E6
 
@@ -27,7 +27,7 @@ $app-red:                       $color-firebrick !default;
 $app-primary-base:              $color-thunderbird !default;
 $app-primary-darker:            darken($app-primary-base, 15%)  !default;
 $app-primary-dark:              darken($app-primary-base, 7.5%) !default;
-$app-primary:                   $app-primary-base               !default; // #CC3517
+$app-primary:                   $app-primary-base               !default; // #e75113
 $app-primary-light:             lighten($app-primary-base, 7.5%) !default;
 $app-primary-lighter:           lighten($app-primary-base, 15%) !default;
 

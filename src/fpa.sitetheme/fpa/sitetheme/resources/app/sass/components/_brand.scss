@@ -45,7 +45,7 @@
 
 .app-brandname {
     display: block;
-    padding: $fpacer 0;
+    padding: $spacer 0;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.25;
@@ -55,7 +55,7 @@
         @include media-breakpoint-up(md) {
             flex: 0 0 66.6666%;
         }
-        margin-top: -($fpacer);
+        margin-top: -($spacer);
     }
     .app-brand-panel-inverse & {
         font-size: 1.25rem;
@@ -77,5 +77,5 @@
 }
 
 .app-logo-mobile {
-    padding: $fpacer $fpacer 0 $fpacer;
+    padding: $spacer $spacer 0 $spacer;
 }

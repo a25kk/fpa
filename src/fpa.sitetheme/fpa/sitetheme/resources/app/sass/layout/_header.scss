@@ -6,13 +6,7 @@
 .app-header {
     position: relative;
     overflow: hidden;
-    //background: url("../assets/img/top.jpg") center center $app-primary;
-    background: #142f66; /* Old browsers */
-    background: -moz-linear-gradient(left,  #142f66 0%, #9e050e 99%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  #142f66 0%,#9e050e 99%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  #142f66 0%,#9e050e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#142f66', endColorstr='#9e050e',GradientType=1 ); /* IE6-9 */
-
+    background: $gray-200;
     @include media-breakpoint-up(md) {
         //border-bottom: .5rem solid $app-secondary;
         margin-bottom: 1rem;
@@ -65,7 +59,7 @@
     }
     &.app-header-brandbar {
         @include media-breakpoint-up(md) {
-            @include make-col(1);
+            @include make-col(4);
         }
     }
 
@@ -82,7 +76,7 @@
 
     &.app-header-navbar {
         @include media-breakpoint-up(lg) {
-            @include make-col(10);
+            @include make-col(8);
         }
     }
     &.app-header__social-bar {

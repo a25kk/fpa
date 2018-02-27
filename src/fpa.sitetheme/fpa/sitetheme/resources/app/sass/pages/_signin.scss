@@ -12,7 +12,7 @@
 }
 
 .app-signin {
-    margin-top: ($fpacer * 2);
+    margin-top: ($spacer * 2);
     border-radius: 0;
 }
 
@@ -43,8 +43,8 @@
     padding: 0;
     // background: $navbar-default-bg;
     &.app-signin-group-text {
-        margin-top: $fpacer;
-        padding: $fpacer 0;
+        margin-top: $spacer;
+        padding: $spacer 0;
         border-top: 1px dotted $gray-400;
     }
     label,
@@ -67,7 +67,7 @@
 
 .page-aside {
     position:relative;
-    padding: ($fpacer * 2) $fpacer;
+    padding: ($spacer * 2) $spacer;
 }
 
 .page-signin {
@@ -75,7 +75,7 @@
 }
 
 .page-signin .documentDescription {
-    margin-bottom: $fpacer;
+    margin-bottom: $spacer;
 }
 .page-signin p {
     @extend .text-muted;
@@ -83,7 +83,7 @@
 
 // registration
 .app-register {
-    margin-bottom: ($fpacer * 2);
+    margin-bottom: ($spacer * 2);
     border-bottom: 5px solid $green;
 }
 

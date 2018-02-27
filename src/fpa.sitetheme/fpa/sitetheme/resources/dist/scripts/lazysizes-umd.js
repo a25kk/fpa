@@ -74,7 +74,7 @@
 
 		event.initCustomEvent(name, !noBubbles, !noCancelable, detail || {});
 
-		elem.difpatchEvent(event);
+		elem.dispatchEvent(event);
 		return event;
 	};
 

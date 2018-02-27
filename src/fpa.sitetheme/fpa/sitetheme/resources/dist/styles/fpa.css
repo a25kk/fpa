@@ -80,8 +80,8 @@
 .ion-ios-at-outline:before,
 .ion-ios-attach:before,
 .ion-ios-attach-outline:before,
-.ion-ios-backfpace:before,
-.ion-ios-backfpace-outline:before,
+.ion-ios-backspace:before,
+.ion-ios-backspace-outline:before,
 .ion-ios-barcode:before,
 .ion-ios-barcode-outline:before,
 .ion-ios-baseball:before,
@@ -685,7 +685,7 @@
 .ion-md-arrow-up:before,
 .ion-md-at:before,
 .ion-md-attach:before,
-.ion-md-backfpace:before,
+.ion-md-backspace:before,
 .ion-md-barcode:before,
 .ion-md-baseball:before,
 .ion-md-basket:before,
@@ -1263,12 +1263,12 @@
     content: '\f11b';
 }
 
-.ion-ios-backfpace:before
+.ion-ios-backspace:before
 {
     content: '\f11d';
 }
 
-.ion-ios-backfpace-outline:before
+.ion-ios-backspace-outline:before
 {
     content: '\f11c';
 }
@@ -4288,7 +4288,7 @@
     content: '\f28e';
 }
 
-.ion-md-backfpace:before
+.ion-md-backspace:before
 {
     content: '\f28f';
 }
@@ -5662,7 +5662,7 @@
     }
     pre
     {
-        white-fpace: pre-wrap !important;
+        white-space: pre-wrap !important;
     }
     pre,
     blockquote
@@ -5746,7 +5746,7 @@ html
     -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: tranfparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @-ms-viewport
@@ -5905,8 +5905,8 @@ a
 {
     text-decoration: none;
 
-    color: #10275b;
-    background-color: tranfparent;
+    color: #e75113;
+    background-color: transparent;
 
     -webkit-text-decoration-skip: objects;
 }
@@ -5940,7 +5940,7 @@ code,
 kbd,
 samp
 {
-    font-family: monofpace, monofpace;
+    font-family: monospace, monospace;
     font-size: 1em;
 }
 
@@ -6097,7 +6097,7 @@ legend
     margin-bottom: .5rem;
     padding: 0;
 
-    white-fpace: normal; 
+    white-space: normal; 
 
     color: inherit;
 }
@@ -6365,7 +6365,7 @@ kbd,
 pre,
 samp
 {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monofpace;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 code
@@ -7764,7 +7764,7 @@ pre code
     max-width: 100%;
     margin-bottom: 1rem;
 
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .table th,
 .table td
@@ -8158,7 +8158,7 @@ input[type='tel']::-ms-expand,
 input[type='color']::-ms-expand
 {
     border: 0; 
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .form-control:focus,
 select:focus,
@@ -8325,9 +8325,9 @@ select:focus::-ms-value
     padding-top: .375rem;
     padding-bottom: .375rem;
 
-    border: solid tranfparent;
+    border: solid transparent;
     border-width: 1px 0; 
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .form-control-plaintext.form-control-sm,
 .input-group-sm > .form-control-plaintext.form-control,
@@ -9313,9 +9313,9 @@ input.is-invalid[type='color'] ~ .invalid-tooltip,
             user-select: none;
     text-align: center;
     vertical-align: middle;
-    white-fpace: nowrap;
+    white-space: nowrap;
 
-    border: 1px solid tranfparent;
+    border: 1px solid transparent;
     border-radius: 0;
 }
 .btn:hover,
@@ -9666,7 +9666,7 @@ fieldset:disabled a.btn
 {
     color: #007bff;
     border-color: #007bff; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-primary:hover
@@ -9684,7 +9684,7 @@ fieldset:disabled a.btn
 .btn-outline-primary:disabled
 {
     color: #007bff;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .btn-outline-primary:not(:disabled):not(.disabled).active,
@@ -9705,7 +9705,7 @@ fieldset:disabled a.btn
 {
     color: #6c757d;
     border-color: #6c757d; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-secondary:hover
@@ -9723,7 +9723,7 @@ fieldset:disabled a.btn
 .btn-outline-secondary:disabled
 {
     color: #6c757d;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled):active,
 .btn-outline-secondary:not(:disabled):not(.disabled).active,
@@ -9744,7 +9744,7 @@ fieldset:disabled a.btn
 {
     color: #28a745;
     border-color: #28a745; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-success:hover
@@ -9762,7 +9762,7 @@ fieldset:disabled a.btn
 .btn-outline-success:disabled
 {
     color: #28a745;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-success:not(:disabled):not(.disabled):active,
 .btn-outline-success:not(:disabled):not(.disabled).active,
@@ -9783,7 +9783,7 @@ fieldset:disabled a.btn
 {
     color: #17a2b8;
     border-color: #17a2b8; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-info:hover
@@ -9801,7 +9801,7 @@ fieldset:disabled a.btn
 .btn-outline-info:disabled
 {
     color: #17a2b8;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-info:not(:disabled):not(.disabled):active,
 .btn-outline-info:not(:disabled):not(.disabled).active,
@@ -9822,7 +9822,7 @@ fieldset:disabled a.btn
 {
     color: #ffc107;
     border-color: #ffc107; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-warning:hover
@@ -9840,7 +9840,7 @@ fieldset:disabled a.btn
 .btn-outline-warning:disabled
 {
     color: #ffc107;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-warning:not(:disabled):not(.disabled):active,
 .btn-outline-warning:not(:disabled):not(.disabled).active,
@@ -9861,7 +9861,7 @@ fieldset:disabled a.btn
 {
     color: #dc3545;
     border-color: #dc3545; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-danger:hover
@@ -9879,7 +9879,7 @@ fieldset:disabled a.btn
 .btn-outline-danger:disabled
 {
     color: #dc3545;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-danger:not(:disabled):not(.disabled):active,
 .btn-outline-danger:not(:disabled):not(.disabled).active,
@@ -9900,7 +9900,7 @@ fieldset:disabled a.btn
 {
     color: #f8f9fa;
     border-color: #f8f9fa; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-light:hover
@@ -9918,7 +9918,7 @@ fieldset:disabled a.btn
 .btn-outline-light:disabled
 {
     color: #f8f9fa;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-light:not(:disabled):not(.disabled):active,
 .btn-outline-light:not(:disabled):not(.disabled).active,
@@ -9939,7 +9939,7 @@ fieldset:disabled a.btn
 {
     color: #343a40;
     border-color: #343a40; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .btn-outline-dark:hover
@@ -9957,7 +9957,7 @@ fieldset:disabled a.btn
 .btn-outline-dark:disabled
 {
     color: #343a40;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .btn-outline-dark:not(:disabled):not(.disabled):active,
 .btn-outline-dark:not(:disabled):not(.disabled).active,
@@ -9978,23 +9978,23 @@ fieldset:disabled a.btn
 {
     font-weight: 400;
 
-    color: #10275b;
-    background-color: tranfparent;
+    color: #e75113;
+    background-color: transparent;
 }
 .btn-link:hover
 {
     text-decoration: underline;
 
     color: #0056b3;
-    border-color: tranfparent; 
-    background-color: tranfparent;
+    border-color: transparent; 
+    background-color: transparent;
 }
 .btn-link:focus,
 .btn-link.focus
 {
     text-decoration: underline;
 
-    border-color: tranfparent;
+    border-color: transparent;
     box-shadow: none;
 }
 .btn-link:disabled,
@@ -10061,9 +10061,9 @@ input[type='button'].btn-block
     vertical-align: .255em;
 
     border-top: .3em solid;
-    border-right: .3em solid tranfparent;
+    border-right: .3em solid transparent;
     border-bottom: 0;
-    border-left: .3em solid tranfparent;
+    border-left: .3em solid transparent;
 }
 
 .dropdown-toggle:empty::after
@@ -10115,9 +10115,9 @@ input[type='button'].btn-block
     vertical-align: .255em;
 
     border-top: 0;
-    border-right: .3em solid tranfparent;
+    border-right: .3em solid transparent;
     border-bottom: .3em solid;
-    border-left: .3em solid tranfparent;
+    border-left: .3em solid transparent;
 }
 
 .dropup .dropdown-toggle:empty::after
@@ -10142,8 +10142,8 @@ input[type='button'].btn-block
     content: '';
     vertical-align: .255em;
 
-    border-top: .3em solid tranfparent;
-    border-bottom: .3em solid tranfparent;
+    border-top: .3em solid transparent;
+    border-bottom: .3em solid transparent;
     border-left: .3em solid;
 }
 
@@ -10191,9 +10191,9 @@ input[type='button'].btn-block
     content: '';
     vertical-align: .255em;
 
-    border-top: .3em solid tranfparent;
+    border-top: .3em solid transparent;
     border-right: .3em solid;
-    border-bottom: .3em solid tranfparent;
+    border-bottom: .3em solid transparent;
 }
 
 .dropleft .dropdown-toggle:empty::after
@@ -10227,11 +10227,11 @@ input[type='button'].btn-block
     padding: .25rem 1.5rem;
 
     text-align: inherit;
-    white-fpace: nowrap;
+    white-space: nowrap;
 
     color: #212529;
     border: 0; 
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .dropdown-item:hover,
 .dropdown-item:focus
@@ -10253,7 +10253,7 @@ input[type='button'].btn-block
 .dropdown-item:disabled
 {
     color: #6c757d;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 
 .dropdown-menu.show
@@ -10270,7 +10270,7 @@ input[type='button'].btn-block
     margin-bottom: 0;
     padding: .5rem 1.5rem;
 
-    white-fpace: nowrap; 
+    white-space: nowrap; 
 
     color: #6c757d;
 }
@@ -10897,7 +10897,7 @@ input[type='button'].btn-block
     padding: .375rem .75rem;
 
     text-align: center;
-    white-fpace: nowrap;
+    white-space: nowrap;
 
     color: #495057;
     border: 1px solid #ced4da; 
@@ -11237,7 +11237,7 @@ input[type='button'].btn-block
 }
 .nav-tabs .nav-link
 {
-    border: 1px solid tranfparent;
+    border: 1px solid transparent;
 }
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus
@@ -11247,8 +11247,8 @@ input[type='button'].btn-block
 .nav-tabs .nav-link.disabled
 {
     color: #6c757d;
-    border-color: tranfparent; 
-    background-color: tranfparent;
+    border-color: transparent; 
+    background-color: transparent;
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link
@@ -11311,7 +11311,7 @@ input[type='button'].btn-block
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: justify;
-    justify-content: fpace-between;
+    justify-content: space-between;
 }
 .navbar > .container,
 .navbar > .app-footer-cards-wrapper,
@@ -11327,7 +11327,7 @@ input[type='button'].btn-block
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: justify;
-    justify-content: fpace-between;
+    justify-content: space-between;
 }
 
 .navbar-brand
@@ -11341,7 +11341,7 @@ input[type='button'].btn-block
     padding-top: .3125rem;
     padding-bottom: .3125rem;
 
-    white-fpace: nowrap;
+    white-space: nowrap;
 }
 .navbar-brand:hover,
 .navbar-brand:focus
@@ -11399,8 +11399,8 @@ input[type='button'].btn-block
 
     padding: .25rem .75rem;
 
-    border: 1px solid tranfparent; 
-    background-color: tranfparent;
+    border: 1px solid transparent; 
+    background-color: transparent;
 }
 .navbar-toggler:hover,
 .navbar-toggler:focus
@@ -12277,9 +12277,9 @@ button.bg-dark:focus
     background-color: #fff !important;
 }
 
-.bg-tranfparent
+.bg-transparent
 {
-    background-color: tranfparent !important;
+    background-color: transparent !important;
 }
 
 .border
@@ -12815,13 +12815,13 @@ button.bg-dark:focus
 .justify-content-between
 {
     -ms-flex-pack: justify !important;
-    justify-content: fpace-between !important;
+    justify-content: space-between !important;
 }
 
 .justify-content-around
 {
     -ms-flex-pack: distribute !important;
-    justify-content: fpace-around !important;
+    justify-content: space-around !important;
 }
 
 .align-items-start
@@ -12875,13 +12875,13 @@ button.bg-dark:focus
 .align-content-between
 {
     -ms-flex-line-pack: justify !important;
-    align-content: fpace-between !important;
+    align-content: space-between !important;
 }
 
 .align-content-around
 {
     -ms-flex-line-pack: distribute !important;
-    align-content: fpace-around !important;
+    align-content: space-around !important;
 }
 
 .align-content-stretch
@@ -12990,12 +12990,12 @@ button.bg-dark:focus
     .justify-content-sm-between
     {
         -ms-flex-pack: justify !important;
-        justify-content: fpace-between !important;
+        justify-content: space-between !important;
     }
     .justify-content-sm-around
     {
         -ms-flex-pack: distribute !important;
-        justify-content: fpace-around !important;
+        justify-content: space-around !important;
     }
     .align-items-sm-start
     {
@@ -13040,12 +13040,12 @@ button.bg-dark:focus
     .align-content-sm-between
     {
         -ms-flex-line-pack: justify !important;
-        align-content: fpace-between !important;
+        align-content: space-between !important;
     }
     .align-content-sm-around
     {
         -ms-flex-line-pack: distribute !important;
-        align-content: fpace-around !important;
+        align-content: space-around !important;
     }
     .align-content-sm-stretch
     {
@@ -13148,12 +13148,12 @@ button.bg-dark:focus
     .justify-content-md-between
     {
         -ms-flex-pack: justify !important;
-        justify-content: fpace-between !important;
+        justify-content: space-between !important;
     }
     .justify-content-md-around
     {
         -ms-flex-pack: distribute !important;
-        justify-content: fpace-around !important;
+        justify-content: space-around !important;
     }
     .align-items-md-start
     {
@@ -13198,12 +13198,12 @@ button.bg-dark:focus
     .align-content-md-between
     {
         -ms-flex-line-pack: justify !important;
-        align-content: fpace-between !important;
+        align-content: space-between !important;
     }
     .align-content-md-around
     {
         -ms-flex-line-pack: distribute !important;
-        align-content: fpace-around !important;
+        align-content: space-around !important;
     }
     .align-content-md-stretch
     {
@@ -13306,12 +13306,12 @@ button.bg-dark:focus
     .justify-content-lg-between
     {
         -ms-flex-pack: justify !important;
-        justify-content: fpace-between !important;
+        justify-content: space-between !important;
     }
     .justify-content-lg-around
     {
         -ms-flex-pack: distribute !important;
-        justify-content: fpace-around !important;
+        justify-content: space-around !important;
     }
     .align-items-lg-start
     {
@@ -13356,12 +13356,12 @@ button.bg-dark:focus
     .align-content-lg-between
     {
         -ms-flex-line-pack: justify !important;
-        align-content: fpace-between !important;
+        align-content: space-between !important;
     }
     .align-content-lg-around
     {
         -ms-flex-line-pack: distribute !important;
-        align-content: fpace-around !important;
+        align-content: space-around !important;
     }
     .align-content-lg-stretch
     {
@@ -13464,12 +13464,12 @@ button.bg-dark:focus
     .justify-content-xl-between
     {
         -ms-flex-pack: justify !important;
-        justify-content: fpace-between !important;
+        justify-content: space-between !important;
     }
     .justify-content-xl-around
     {
         -ms-flex-pack: distribute !important;
-        justify-content: fpace-around !important;
+        justify-content: space-around !important;
     }
     .align-items-xl-start
     {
@@ -13514,12 +13514,12 @@ button.bg-dark:focus
     .align-content-xl-between
     {
         -ms-flex-line-pack: justify !important;
-        align-content: fpace-between !important;
+        align-content: space-between !important;
     }
     .align-content-xl-around
     {
         -ms-flex-line-pack: distribute !important;
-        align-content: fpace-around !important;
+        align-content: space-around !important;
     }
     .align-content-xl-stretch
     {
@@ -13703,7 +13703,7 @@ button.bg-dark:focus
     height: 1px;
     padding: 0;
 
-    white-fpace: nowrap;
+    white-space: nowrap;
 
     border: 0; 
 
@@ -13722,7 +13722,7 @@ button.bg-dark:focus
     width: auto;
     height: auto;
 
-    white-fpace: normal;
+    white-space: normal;
 
     -webkit-clip-path: none;
             clip-path: none;
@@ -15436,14 +15436,14 @@ button.bg-dark:focus
 
 .text-nowrap
 {
-    white-fpace: nowrap !important;
+    white-space: nowrap !important;
 }
 
 .text-truncate
 {
     overflow: hidden;
 
-    white-fpace: nowrap; 
+    white-space: nowrap; 
     text-overflow: ellipsis;
 }
 
@@ -15664,9 +15664,9 @@ a.text-dark:focus
 {
     font: 0/0 a;
 
-    color: tranfparent;
+    color: transparent;
     border: 0; 
-    background-color: tranfparent;
+    background-color: transparent;
     text-shadow: none;
 }
 
@@ -15773,8 +15773,8 @@ http://flickity.metafizzy.co
         -ms-user-select: none;
             user-select: none; 
 
-    -webkit-tap-highlight-color: tranfparent;
-            tap-highlight-color: tranfparent;
+    -webkit-tap-highlight-color: transparent;
+            tap-highlight-color: transparent;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport
@@ -15930,7 +15930,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-grow:hover,
 .hvr-grow:focus,
@@ -15949,7 +15949,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shrink:hover,
 .hvr-shrink:focus,
@@ -15979,7 +15979,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-pulse:hover,
 .hvr-pulse:focus,
@@ -16008,7 +16008,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-pulse-grow:hover,
 .hvr-pulse-grow:focus,
@@ -16038,7 +16038,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-pulse-shrink:hover,
 .hvr-pulse-shrink:focus,
@@ -16072,7 +16072,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-push:hover,
 .hvr-push:focus,
@@ -16101,7 +16101,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-pop:hover,
 .hvr-pop:focus,
@@ -16122,7 +16122,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bounce-in:hover,
 .hvr-bounce-in:focus,
@@ -16141,7 +16141,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bounce-out:hover,
 .hvr-bounce-out:focus,
@@ -16161,7 +16161,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-rotate:hover,
 .hvr-rotate:focus,
@@ -16180,7 +16180,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-grow-rotate:hover,
 .hvr-grow-rotate:focus,
@@ -16200,7 +16200,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-float:hover,
 .hvr-float:focus,
@@ -16220,7 +16220,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-sink:hover,
 .hvr-sink:focus,
@@ -16262,7 +16262,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bob:hover,
 .hvr-bob:focus,
@@ -16311,7 +16311,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-hang:hover,
 .hvr-hang:focus,
@@ -16337,7 +16337,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-skew:hover,
 .hvr-skew:focus,
@@ -16357,7 +16357,7 @@ http://flickity.metafizzy.co
     transform-origin: 0 100%; 
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-skew-forward:hover,
 .hvr-skew-forward:focus,
@@ -16377,7 +16377,7 @@ http://flickity.metafizzy.co
     transform-origin: 0 100%; 
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-skew-backward:hover,
 .hvr-skew-backward:focus,
@@ -16423,7 +16423,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-vertical:hover,
 .hvr-wobble-vertical:focus,
@@ -16472,7 +16472,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-horizontal:hover,
 .hvr-wobble-horizontal:focus,
@@ -16521,7 +16521,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-to-bottom-right:hover,
 .hvr-wobble-to-bottom-right:focus,
@@ -16570,7 +16570,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-to-top-right:hover,
 .hvr-wobble-to-top-right:focus,
@@ -16620,7 +16620,7 @@ http://flickity.metafizzy.co
     transform-origin: 0 100%; 
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-top:hover,
 .hvr-wobble-top:focus,
@@ -16670,7 +16670,7 @@ http://flickity.metafizzy.co
     transform-origin: 100% 0; 
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-bottom:hover,
 .hvr-wobble-bottom:focus,
@@ -16719,7 +16719,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-wobble-skew:hover,
 .hvr-wobble-skew:focus,
@@ -16752,7 +16752,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-buzz:hover,
 .hvr-buzz:focus,
@@ -16817,7 +16817,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-buzz-out:hover,
 .hvr-buzz-out:focus,
@@ -16839,7 +16839,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-forward:hover,
 .hvr-forward:focus,
@@ -16858,7 +16858,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-backward:hover,
 .hvr-backward:focus,
@@ -16879,7 +16879,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-fade:hover,
 .hvr-fade:focus,
@@ -16909,7 +16909,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-back-pulse:hover,
 .hvr-back-pulse:focus,
@@ -16938,7 +16938,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-sweep-to-right:before
 {
@@ -16983,7 +16983,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-sweep-to-left:before
 {
@@ -17028,7 +17028,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-sweep-to-bottom:before
 {
@@ -17073,7 +17073,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-sweep-to-top:before
 {
@@ -17118,7 +17118,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bounce-to-right:before
 {
@@ -17164,7 +17164,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bounce-to-left:before
 {
@@ -17210,7 +17210,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bounce-to-bottom:before
 {
@@ -17256,7 +17256,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bounce-to-top:before
 {
@@ -17304,7 +17304,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #e1e1e1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-radial-out:before
 {
@@ -17351,7 +17351,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #2098d1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-radial-in:before
 {
@@ -17397,7 +17397,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #2098d1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-rectangle-in:before
 {
@@ -17442,7 +17442,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #e1e1e1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-rectangle-out:before
 {
@@ -17487,7 +17487,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #2098d1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shutter-in-horizontal:before
 {
@@ -17533,7 +17533,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #e1e1e1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shutter-out-horizontal:before
 {
@@ -17579,7 +17579,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #2098d1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shutter-in-vertical:before
 {
@@ -17625,7 +17625,7 @@ http://flickity.metafizzy.co
     vertical-align: middle;
 
     background: #e1e1e1;
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shutter-out-vertical:before
 {
@@ -17669,15 +17669,15 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
-    box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
+    box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px transparent;
     /* Hack to improve aliasing on mobile/tablet devices */
 }
 .hvr-border-fade:hover,
 .hvr-border-fade:focus,
 .hvr-border-fade:active
 {
-    box-shadow: inset 0 0 0 4px #2098d1, 0 0 1px tranfparent;
+    box-shadow: inset 0 0 0 4px #2098d1, 0 0 1px transparent;
     /* Hack to improve aliasing on mobile/tablet devices */
 }
 
@@ -17691,8 +17691,8 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
-    box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
+    box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px transparent;
     /* Hack to improve aliasing on mobile/tablet devices */
 }
 .hvr-hollow:hover,
@@ -17712,7 +17712,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-trim:before
 {
@@ -17760,7 +17760,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-ripple-out:before
 {
@@ -17806,7 +17806,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-ripple-in:before
 {
@@ -17839,7 +17839,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-outline-out:before
 {
@@ -17875,7 +17875,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-outline-in:before
 {
@@ -17915,7 +17915,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-round-corners:hover,
 .hvr-round-corners:focus,
@@ -17935,7 +17935,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-underline-from-left:before
 {
@@ -17972,7 +17972,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-underline-from-center:before
 {
@@ -18010,7 +18010,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-underline-from-right:before
 {
@@ -18047,7 +18047,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-overline-from-left:before
 {
@@ -18084,7 +18084,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-overline-from-center:before
 {
@@ -18122,7 +18122,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-overline-from-right:before
 {
@@ -18159,7 +18159,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-reveal:before
 {
@@ -18199,7 +18199,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-underline-reveal:before
 {
@@ -18237,7 +18237,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-overline-reveal:before
 {
@@ -18275,7 +18275,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-glow:hover,
 .hvr-glow:focus,
@@ -18294,7 +18294,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shadow:hover,
 .hvr-shadow:focus,
@@ -18313,7 +18313,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-grow-shadow:hover,
 .hvr-grow-shadow:focus,
@@ -18334,7 +18334,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-box-shadow-outset:hover,
 .hvr-box-shadow-outset:focus,
@@ -18353,15 +18353,15 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
-    box-shadow: inset 0 0 0 rgba(0, 0, 0, .6), 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, .6), 0 0 1px transparent;
     /* Hack to improve aliasing on mobile/tablet devices */
 }
 .hvr-box-shadow-inset:hover,
 .hvr-box-shadow-inset:focus,
 .hvr-box-shadow-inset:active
 {
-    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .6), 0 0 1px tranfparent;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .6), 0 0 1px transparent;
     /* Hack to improve aliasing on mobile/tablet devices */
 }
 
@@ -18377,7 +18377,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-float-shadow:before
 {
@@ -18396,7 +18396,7 @@ http://flickity.metafizzy.co
     pointer-events: none;
 
     opacity: 0;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, tranfparent 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, transparent 80%);
 }
 .hvr-float-shadow:hover,
 .hvr-float-shadow:focus,
@@ -18425,7 +18425,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-shadow-radial:before,
 .hvr-shadow-radial:after
@@ -18449,13 +18449,13 @@ http://flickity.metafizzy.co
 {
     bottom: 100%;
 
-    background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, .6) 0%, tranfparent 80%);
+    background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, .6) 0%, transparent 80%);
 }
 .hvr-shadow-radial:after
 {
     top: 100%;
 
-    background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, .6) 0%, tranfparent 80%);
+    background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, .6) 0%, transparent 80%);
 }
 .hvr-shadow-radial:hover:before,
 .hvr-shadow-radial:focus:before,
@@ -18478,7 +18478,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-top:before
 {
@@ -18494,7 +18494,7 @@ http://flickity.metafizzy.co
 
     border-width: 0 10px 10px 10px;
     border-style: solid;
-    border-color: tranfparent tranfparent #e1e1e1 tranfparent;
+    border-color: transparent transparent #e1e1e1 transparent;
 }
 .hvr-bubble-top:hover:before,
 .hvr-bubble-top:focus:before,
@@ -18513,7 +18513,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-right:before
 {
@@ -18529,7 +18529,7 @@ http://flickity.metafizzy.co
 
     border-width: 10px 0 10px 10px;
     border-style: solid;
-    border-color: tranfparent tranfparent tranfparent #e1e1e1;
+    border-color: transparent transparent transparent #e1e1e1;
 }
 .hvr-bubble-right:hover:before,
 .hvr-bubble-right:focus:before,
@@ -18548,7 +18548,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-bottom:before
 {
@@ -18564,7 +18564,7 @@ http://flickity.metafizzy.co
 
     border-width: 10px 10px 0 10px;
     border-style: solid;
-    border-color: #e1e1e1 tranfparent tranfparent tranfparent;
+    border-color: #e1e1e1 transparent transparent transparent;
 }
 .hvr-bubble-bottom:hover:before,
 .hvr-bubble-bottom:focus:before,
@@ -18583,7 +18583,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-left:before
 {
@@ -18599,7 +18599,7 @@ http://flickity.metafizzy.co
 
     border-width: 10px 10px 10px 0;
     border-style: solid;
-    border-color: tranfparent #e1e1e1 tranfparent tranfparent;
+    border-color: transparent #e1e1e1 transparent transparent;
 }
 .hvr-bubble-left:hover:before,
 .hvr-bubble-left:focus:before,
@@ -18620,7 +18620,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-float-top:before
 {
@@ -18635,7 +18635,7 @@ http://flickity.metafizzy.co
 
     border-width: 0 10px 10px 10px;
     border-style: solid;
-    border-color: tranfparent tranfparent #e1e1e1 tranfparent;
+    border-color: transparent transparent #e1e1e1 transparent;
 }
 .hvr-bubble-float-top:hover,
 .hvr-bubble-float-top:focus,
@@ -18662,7 +18662,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-float-right:before
 {
@@ -18677,7 +18677,7 @@ http://flickity.metafizzy.co
 
     border-width: 10px 0 10px 10px;
     border-style: solid;
-    border-color: tranfparent tranfparent tranfparent #e1e1e1;
+    border-color: transparent transparent transparent #e1e1e1;
 }
 .hvr-bubble-float-right:hover,
 .hvr-bubble-float-right:focus,
@@ -18704,7 +18704,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-float-bottom:before
 {
@@ -18719,7 +18719,7 @@ http://flickity.metafizzy.co
 
     border-width: 10px 10px 0 10px;
     border-style: solid;
-    border-color: #e1e1e1 tranfparent tranfparent tranfparent;
+    border-color: #e1e1e1 transparent transparent transparent;
 }
 .hvr-bubble-float-bottom:hover,
 .hvr-bubble-float-bottom:focus,
@@ -18746,7 +18746,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-bubble-float-left:before
 {
@@ -18761,7 +18761,7 @@ http://flickity.metafizzy.co
 
     border-width: 10px 10px 10px 0;
     border-style: solid;
-    border-color: tranfparent #e1e1e1 tranfparent tranfparent;
+    border-color: transparent #e1e1e1 transparent transparent;
 }
 .hvr-bubble-float-left:hover,
 .hvr-bubble-float-left:focus,
@@ -18790,7 +18790,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-back:before
 {
@@ -18827,7 +18827,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-forward:before
 {
@@ -18880,7 +18880,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-down:before
 {
@@ -18932,7 +18932,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-up:before
 {
@@ -18967,7 +18967,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-spin:before
 {
@@ -19023,7 +19023,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-drop:before
 {
@@ -19067,7 +19067,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-fade:before
 {
@@ -19118,7 +19118,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-float-away:before,
 .hvr-icon-float-away:after
@@ -19176,7 +19176,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-sink-away:before,
 .hvr-icon-sink-away:after
@@ -19220,7 +19220,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-grow:before
 {
@@ -19257,7 +19257,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-shrink:before
 {
@@ -19306,7 +19306,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-pulse:before
 {
@@ -19352,7 +19352,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-pulse-grow:before
 {
@@ -19399,7 +19399,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-pulse-shrink:before
 {
@@ -19447,7 +19447,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-push:before
 {
@@ -19496,7 +19496,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-pop:before
 {
@@ -19536,7 +19536,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-bounce:before
 {
@@ -19574,7 +19574,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-rotate:before
 {
@@ -19611,7 +19611,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-grow-rotate:before
 {
@@ -19648,7 +19648,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-float:before
 {
@@ -19685,7 +19685,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-sink:before
 {
@@ -19747,7 +19747,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-bob:before
 {
@@ -19813,7 +19813,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-hang:before
 {
@@ -19883,7 +19883,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-wobble-horizontal:before
 {
@@ -19949,7 +19949,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-wobble-vertical:before
 {
@@ -19999,7 +19999,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-buzz:before
 {
@@ -20081,7 +20081,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-icon-buzz-out:before
 {
@@ -20116,7 +20116,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-curl-top-left:before
 {
@@ -20159,7 +20159,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-curl-top-right:before
 {
@@ -20198,7 +20198,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-curl-bottom-right:before
 {
@@ -20237,7 +20237,7 @@ http://flickity.metafizzy.co
     transform: perspective(1px) translateZ(0);
     vertical-align: middle;
 
-    box-shadow: 0 0 1px tranfparent;
+    box-shadow: 0 0 1px transparent;
 }
 .hvr-curl-bottom-left:before
 {
@@ -22649,7 +22649,7 @@ div.riform .label
 
 .app-default
 {
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-header
@@ -22658,15 +22658,7 @@ div.riform .label
 
     overflow: hidden;
 
-    background: #142f66;
-    /* Old browsers */
-    /* FF3.6-15 */
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #142f66 0%, #9e050e 99%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#142f66', endColorstr='#9e050e',GradientType=1 );
-    /* IE6-9 */
+    background: #e9ecef;
 }
 @media (min-width: 768px)
 {
@@ -22762,10 +22754,10 @@ div.riform .label
 {
     .app-header-panel.app-header-brandbar
     {
-        max-width: 8.3333333333%; 
+        max-width: 33.3333333333%; 
 
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+        -ms-flex: 0 0 33.3333333333%;
+            flex: 0 0 33.3333333333%;
     }
 }
 
@@ -22784,10 +22776,10 @@ div.riform .label
 {
     .app-header-panel.app-header-navbar
     {
-        max-width: 83.3333333333%; 
+        max-width: 66.6666666667%; 
 
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+        -ms-flex: 0 0 66.6666666667%;
+            flex: 0 0 66.6666666667%;
     }
 }
 
@@ -23042,7 +23034,7 @@ div.riform .label
 {
     .app-navbar-nav
     {
-        -ms-flex-pack: justify;
+        -ms-flex-pack: fpace-between;
         justify-content: fpace-between;
     }
 }
@@ -23111,7 +23103,7 @@ div.riform .label
 {
     text-decoration: none; 
 
-    color: #0a193a;
+    color: #c44510;
     background: tranfparent;
 }
 @media (min-width: 768px)
@@ -23141,7 +23133,7 @@ div.riform .label
 {
     text-decoration: none;
 
-    color: #0a193a;
+    color: #c44510;
     background: url('../assets/img/strokeTS02.svg') 0 1rem no-repeat;
     background-color: tranfparent;
     background-size: contain;
@@ -23959,11 +23951,12 @@ fonts--loaded .form__field--checkbox > .option > label
             user-select: none;
     text-align: center;
     vertical-align: middle;
-    white-fpace: normal;
     text-transform: uppercase;
 
     border: 1px solid tranfparent;
-    border-radius: 0;
+    border-radius: 0; 
+
+    white-fpace: normal;
 }
 .button:hover,
 .searchButton:hover,
@@ -24015,7 +24008,7 @@ fieldset[disabled] a.searchButton
 {
     color: #666;
     border-color: #666; 
-    background-color: tranfparent;
+    background-color: transparent;
     background-image: none;
 }
 .button--default:hover
@@ -24033,7 +24026,7 @@ fieldset[disabled] a.searchButton
 .button--default:disabled
 {
     color: #666;
-    background-color: tranfparent;
+    background-color: transparent;
 }
 .button--default:not(:disabled):not(.disabled):active,
 .button--default:not(:disabled):not(.disabled).active,
@@ -24470,7 +24463,7 @@ body.template-frontpage-view .app-pathbar
 
     padding: 1rem 0;
 
-    color: #10275b;
+    color: #e75113;
 }
 .app-brand-panel .app-brandname
 {
@@ -24642,7 +24635,7 @@ body.template-frontpage-view .app-pathbar
             flex-wrap: wrap;
         -ms-flex-align: center;
         align-items: center;
-        -ms-flex-pack: justify;
+        -ms-flex-pack: fpace-between;
         justify-content: fpace-between;
     }
 }
@@ -24985,7 +24978,7 @@ body.template-frontpage-view .app-pathbar
     color: #fff;
     /* FF3.6-15 */
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, black 0%, tranfparent 30%, tranfparent 72%, black 100%);
+    background: linear-gradient(to bottom, black 0%, transparent 30%, transparent 72%, black 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 );
@@ -25226,7 +25219,7 @@ body.template-frontpage-view .app-pathbar
     height: 1px;
     padding: 0;
 
-    white-fpace: nowrap;
+    white-space: nowrap;
 
     border: 0; 
 
@@ -25278,7 +25271,7 @@ body.template-frontpage-view .app-pathbar
 {
     font-weight: 400; 
 
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-card__abstract
@@ -25294,7 +25287,7 @@ body.template-frontpage-view .app-pathbar
 {
     font-weight: 400; 
 
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-card__link
@@ -25735,7 +25728,7 @@ body.template-frontpage-view .app-pathbar
         width: 35%;
         padding: 4rem 2rem 2rem 2rem;
 
-        background: #10275b;
+        background: #e75113;
     }
 }
 
@@ -25948,7 +25941,7 @@ body.template-frontpage-view .app-pathbar
 }
 .app-nav__list-link:hover
 {
-    color: #081430;
+    color: #b8400f;
 }
 .app-nav__list-link.navTreeCurrentNode
 {
@@ -25957,12 +25950,12 @@ body.template-frontpage-view .app-pathbar
 
 .app-nav__list-link--open
 {
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-nav__list-link--active
 {
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-nav__list--level-0
@@ -26094,7 +26087,7 @@ body.template-frontpage-view .app-pathbar
 .date-selector__link:hover
 {
     color: #fff; 
-    background-color: #10275b;
+    background-color: #e75113;
 }
 
 .app-partnerbar h4
@@ -26163,7 +26156,7 @@ body.template-frontpage-view .app-pathbar
 {
     color: #fff;
     border: 0; 
-    background: #10275b;
+    background: #e75113;
 }
 
 .app-newsletter
@@ -26252,7 +26245,7 @@ body.template-frontpage-view .app-pathbar
 
     color: #fff;
     border: 0;
-    background-color: #10275b;
+    background-color: #e75113;
 }
 
 .app-layout-simple
@@ -26290,7 +26283,7 @@ body.template-frontpage-view .app-pathbar
 {
     font-weight: 400;
 
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-signin-content
@@ -26523,7 +26516,7 @@ body.template-frontpage-view .app-pathbar
 
     margin-bottom: 1rem; 
 
-    color: #10275b;
+    color: #e75113;
 }
 .app-page__title h1,
 .app-page-title h1
@@ -26613,7 +26606,7 @@ body.template-frontpage-view .app-pathbar
 {
     font-family: 'Kaushan Script', cursive;
 
-    color: #10275b;
+    color: #e75113;
 }
 
 .app-page-leadimage
@@ -27131,8 +27124,8 @@ body.template-frontpage-view .app-pathbar
 {
     width: 100%; 
 
-    border-color: #10275b !important;
-    background: #10275b;
+    border-color: #e75113 !important;
+    background: #e75113;
 }
 @media (min-width: 576px)
 {

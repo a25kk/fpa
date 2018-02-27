@@ -1,10 +1,10 @@
 <configure
-    xmlns="http://namefpaces.zope.org/zope"
-    xmlns:cmf="http://namefpaces.zope.org/cmf"
-    xmlns:five="http://namefpaces.zope.org/five"
-    xmlns:i18n="http://namefpaces.zope.org/i18n"
-    xmlns:plone="http://namefpaces.plone.org/plone"
-    xmlns:genericsetup="http://namefpaces.zope.org/genericsetup"
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="fpa.sitetheme">
 
     <!-- Zope2 initialization -->

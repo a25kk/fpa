@@ -15,7 +15,7 @@
 // News listing
 .app-news-list {
     @include make-row();
-    //padding: $fpacer;
+    //padding: $spacer;
     //border: 1px solid red;
     margin-left: -10px;
     margin-right: -10px;
@@ -29,7 +29,7 @@
 }
 
 .app-news-list-item {
-    //margin-bottom: $fpacer;
+    //margin-bottom: $spacer;
     padding: 1rem;
 	@include media-breakpoint-up(sm) {
         @include make-col(6);
