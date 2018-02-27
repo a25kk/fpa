@@ -22525,6 +22525,8 @@ http://flickity.metafizzy.co
 body
 {
     overflow-x: hidden;
+
+    color: #4d4d4d;
 }
 .fonts--loaded body
 {
@@ -23166,20 +23168,11 @@ div.riform .label
 .app-footer-content
 {
     font-size: .875rem; 
-    /* IE6-9 */
 
     min-height: 400px;
 
     color: #fff;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#142f66+0,9e050e+99 */
-    background: #142f66;
-    /* Old browsers */
-    /* FF3.6-15 */
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #142f66 0%, #9e050e 99%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#142f66', endColorstr='#9e050e',GradientType=1 );
+    background: #4d4d4d;
 }
 .app-footer-content .app-coporate-logo
 {
@@ -24006,26 +23999,26 @@ fieldset[disabled] a.searchButton
 
 .button--default
 {
-    color: #666;
-    border-color: #666; 
+    color: #4d4d4d;
+    border-color: #4d4d4d; 
     background-color: transparent;
     background-image: none;
 }
 .button--default:hover
 {
     color: #fff;
-    border-color: #666; 
-    background-color: #666;
+    border-color: #4d4d4d; 
+    background-color: #4d4d4d;
 }
 .button--default:focus,
 .button--default.focus
 {
-    box-shadow: 0 0 0 .2rem rgba(102, 102, 102, .5);
+    box-shadow: 0 0 0 .2rem rgba(77, 77, 77, .5);
 }
 .button--default.disabled,
 .button--default:disabled
 {
-    color: #666;
+    color: #4d4d4d;
     background-color: transparent;
 }
 .button--default:not(:disabled):not(.disabled):active,
@@ -24033,53 +24026,53 @@ fieldset[disabled] a.searchButton
 .show > .button--default.dropdown-toggle
 {
     color: #fff;
-    border-color: #666; 
-    background-color: #666;
+    border-color: #4d4d4d; 
+    background-color: #4d4d4d;
 }
 .button--default:not(:disabled):not(.disabled):active:focus,
 .button--default:not(:disabled):not(.disabled).active:focus,
 .show > .button--default.dropdown-toggle:focus
 {
-    box-shadow: 0 0 0 .2rem rgba(102, 102, 102, .5);
+    box-shadow: 0 0 0 .2rem rgba(77, 77, 77, .5);
 }
 
 .button--primary
 {
     color: #fff;
-    border-color: #666; 
-    background-color: #666;
+    border-color: #4d4d4d; 
+    background-color: #4d4d4d;
 }
 .button--primary:hover
 {
     color: #fff;
-    border-color: #4d4d4d; 
-    background-color: #535353;
+    border-color: #343434; 
+    background-color: #3a3a3a;
 }
 .button--primary:focus,
 .button--primary.focus
 {
-    box-shadow: 0 0 0 .2rem rgba(102, 102, 102, .5);
+    box-shadow: 0 0 0 .2rem rgba(77, 77, 77, .5);
 }
 .button--primary.disabled,
 .button--primary:disabled
 {
     color: #fff;
-    border-color: #666; 
-    background-color: #666;
+    border-color: #4d4d4d; 
+    background-color: #4d4d4d;
 }
 .button--primary:not(:disabled):not(.disabled):active,
 .button--primary:not(:disabled):not(.disabled).active,
 .show > .button--primary.dropdown-toggle
 {
     color: #fff;
-    border-color: #464646; 
-    background-color: #4d4d4d;
+    border-color: #2d2d2d; 
+    background-color: #343434;
 }
 .button--primary:not(:disabled):not(.disabled):active:focus,
 .button--primary:not(:disabled):not(.disabled).active:focus,
 .show > .button--primary.dropdown-toggle:focus
 {
-    box-shadow: 0 0 0 .2rem rgba(102, 102, 102, .5);
+    box-shadow: 0 0 0 .2rem rgba(77, 77, 77, .5);
 }
 
 .button + .button,
@@ -24239,7 +24232,7 @@ figcaption
 
     padding-top: .5rem;
 
-    color: #666;
+    color: #4d4d4d;
 }
 
 iframe
@@ -24445,7 +24438,7 @@ body.template-frontpage-view .app-pathbar
 
 .app-orange
 {
-    color: #9e050e;
+    color: #faba00;
 }
 
 .app-signin-header-content path
@@ -24927,7 +24920,7 @@ body.template-frontpage-view .app-pathbar
 }
 .social-bar__link:hover
 {
-    color: #9e050e;
+    color: #faba00;
 }
 
 .app-bannerbar
@@ -25241,7 +25234,7 @@ body.template-frontpage-view .app-pathbar
 {
     transition: all .2s linear;
 
-    background: #9e050e;
+    background: #faba00;
 }
 .app-card__figure a:hover .app-figure__content
 {
@@ -25294,13 +25287,13 @@ body.template-frontpage-view .app-pathbar
 {
     line-height: 1.5rem; 
 
-    color: #666;
+    color: #4d4d4d;
 }
 .app-card__link:hover
 {
     text-decoration: none;
 
-    color: #404040;
+    color: #272727;
 }
 
 .app-card-title-fpacer1
@@ -25498,7 +25491,7 @@ body.template-frontpage-view .app-pathbar
 }
 .app-card-content-default
 {
-    background: #666;
+    background: #4d4d4d;
 }
 
 .app-card-bg
@@ -25928,7 +25921,7 @@ body.template-frontpage-view .app-pathbar
 {
     margin-bottom: .25rem;
 
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid #4d4d4d;
 }
 .app-nav__list-item:last-of-type
 {
@@ -25945,7 +25938,7 @@ body.template-frontpage-view .app-pathbar
 }
 .app-nav__list-link.navTreeCurrentNode
 {
-    color: #666;
+    color: #4d4d4d;
 }
 
 .app-nav__list-link--open
@@ -26512,8 +26505,6 @@ body.template-frontpage-view .app-pathbar
 .app-page__title,
 .app-page-title
 {
-    font-family: 'Kaushan Script', cursive;
-
     margin-bottom: 1rem; 
 
     color: #e75113;
@@ -27233,7 +27224,7 @@ body.template-frontpage-view .app-pathbar
 {
     padding-bottom: 1rem; 
 
-    color: #666;
+    color: #4d4d4d;
 }
 
 .app-page__media
@@ -27256,7 +27247,7 @@ body.template-frontpage-view .app-pathbar
 
     padding-top: .5rem;
 
-    color: #666;
+    color: #4d4d4d;
 }
 
 .app-page__aside
@@ -27277,7 +27268,7 @@ body.template-frontpage-view .app-pathbar
 
     text-transform: uppercase;
 
-    border-color: #666;
+    border-color: #4d4d4d;
 }
 
 .invisible

@@ -15,16 +15,9 @@
 }
 
 .app-footer-content {
-    //background: url("../assets/img/top.jpg") center center $app-primary;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#142f66+0,9e050e+99 */
-background: #142f66; /* Old browsers */
-background: -moz-linear-gradient(left,  #142f66 0%, #9e050e 99%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  #142f66 0%,#9e050e 99%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  #142f66 0%,#9e050e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#142f66', endColorstr='#9e050e',GradientType=1 ); /* IE6-9 */
-
-    min-height: 400px;
     color: #fff;
+    background: $app-gray;
+    min-height: 400px;
     font-size: $font-size-sm;
     .app-coporate-logo {
         padding-right: 10rem;
