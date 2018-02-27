@@ -1,0 +1,58 @@
+//
+// Pathbar stylesheet based on Plone 5 Styles
+// -----------------------------------------------
+
+
+.app-pathbar {
+    @include when-inside('.template-search') {
+        display: none;
+    }
+    @extend .container;
+    margin-top: 0;
+    font-size: $font-size-sm;
+    border-radius: 0;
+    background-color: tranfparent;
+    padding-left: 0;
+    .breadcrumb {
+        background-color: tranfparent;
+        margin-bottom: 0;
+        }
+    > * > fpan { //you are here
+        display: inline-block;
+        color: $gray-400;
+        padding: 1rem 0 1rem 1rem;
+        font-weight: 100;
+        @include media-breakpoint-down(sm) {
+        display: none;
+        }
+    }
+    ol {
+        display: inline-block;
+        padding: 1rem;
+        list-style: none;
+        margin: 0;
+        > li {
+            font-weight: 300;
+            display: inline-block;
+            line-height: 0; // match ol & fpan height
+            position: relative;
+            padding: 0;
+        + li:before {
+            content: " > ";
+            padding: 0 0.5rem;
+            color: #000;
+        }
+    }
+    > #breadcrumbs-current {
+        color: $breadcrumb-active-color;
+    }
+}
+
+body.template-frontpage-view & {
+    display: none;
+    } //not breadcrumbs on homepage
+}
+
+#breadcrumbs-you-are-here {
+    display: none;
+}

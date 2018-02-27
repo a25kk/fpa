@@ -2,6 +2,6 @@
 <layers>
   <layer
     name="fpa.sitetheme"
-    interface="fpa.sitetheme.interfaces.IFpaSiteThemeLayer"
+    interface="fpa.sitetheme.interfaces.IfpaSiteThemeLayer"
   />
 </layers>

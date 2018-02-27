@@ -15,7 +15,7 @@ from plone.testing import z2
 import unittest2 as unittest
 
 
-class FpaSiteThemeLayer(PloneSandboxLayer):
+class fpaSiteThemeLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)
 
@@ -46,11 +46,11 @@ class FpaSiteThemeLayer(PloneSandboxLayer):
         z2.uninstallProduct(app, 'fpa.sitetheme')
 
 
-FIXTURE = FpaBuildoutLayer()
+FIXTURE = fpaBuildoutLayer()
 INTEGRATION_TESTING = IntegrationTesting(
-    bases=(FIXTURE,), name="FpaBuildoutLayer:Integration")
+    bases=(FIXTURE,), name="fpaBuildoutLayer:Integration")
 FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(FIXTURE,), name="FpaBuildoutLayer:Functional")
+    bases=(FIXTURE,), name="fpaBuildoutLayer:Functional")
 
 
 class IntegrationTestCase(unittest.TestCase):

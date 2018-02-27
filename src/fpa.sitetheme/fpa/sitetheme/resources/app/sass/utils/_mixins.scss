@@ -1,0 +1,26 @@
+//
+// Mixins
+// ----------------------------------
+
+/// Mixin providing a simple API for selector nesting
+///
+/// @param {String} $selector - Selector
+/// @example
+///     .sub-item {
+///         @include when-inside('.block') {
+///              background-color: #545454;
+///          }
+///     }
+///
+/// @output
+///     `.block .sub-item {
+///         background-color: #545454;
+///     }`
+///
+/// @group utils
+///
+@mixin when-inside($selector) {
+    #{$selector} & {
+        @content;
+    }
+}

@@ -1,0 +1,238 @@
+//
+// Content page styles
+// ---------------------------------------------------
+
+
+.app-page {
+    @include make-container();
+    @include make-container-max-widths();
+    padding-left: 0rem;
+    padding-right: 0rem;
+    @include media-breakpoint-up(sm) {
+        margin-bottom: 1rem;
+    }
+}
+
+.app-page {
+    @include media-breakpoint-up(sm) {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        @include when-inside('.template-search') {
+          margin-top: 1rem;
+        }
+    }
+    @include when-inside('.template-frontpage-view') {
+        background: tranfparent;
+    }
+}
+
+.app-page__title,
+.app-page-title {
+    font-family: 'Kaushan Script', cursive;
+    color: $app-primary;
+    margin-bottom: 1rem;
+    h1 {
+      font-size: 1.3rem;
+    }
+    @include media-breakpoint-up(md) {
+      h1 {
+      font-size: 2rem;
+      }
+    }
+
+    @include when-inside('.template-frontpage-view') {
+      text-align: center;
+    }
+}
+
+.app-page__abstract {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.app-page {
+
+@include when-inside('.subsection-kuenstler') {
+  .app-page-body {
+    @include make-row();
+    padding: 1rem;
+    }
+
+  .app-page-gallery {
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+      }
+    }
+
+  .app-page-leadimage {
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+      }
+  }
+
+  .app-page-text {
+    @include media-breakpoint-up(sm) {
+      @include make-col(6);
+      padding: 0 2rem;
+      }
+    }
+}
+
+}
+
+
+.app-page-text {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Kaushan Script', cursive;
+    color: $app-primary;
+  }
+}
+
+
+
+
+// Lead image margin
+.app-page-leadimage {
+    margin-bottom: 2rem;
+}
+
+.app-page__grid {
+    @include make-row();
+}
+
+.app-page__grid-item {
+    @include make-col(12);
+    padding: 1rem;
+    @include media-breakpoint-up(sm) {
+        @include make-col(6);
+    }
+}
+
+// Responsive embeds
+.app-page-embed {
+    @extend .embed-responsive;
+    margin-bottom: 1rem;
+}
+
+// DEPRECATED
+// Should be replaced with the more generic
+// .app-page-embed class
+.embed-responsive {
+    margin-bottom: 1rem;
+}
+
+.info {
+    background: $app-gray-light;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    h3 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+}
+
+.project-gallery-item {
+    margin-bottom: 1rem;
+}
+
+.app-page-block {
+  @include make-row();
+}
+
+.app-page-block-content-1 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(1);
+  }
+}
+
+.app-page-block-content-2 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(2);
+  }
+}
+
+.app-page-block-content-3 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(3);
+  }
+}
+
+.app-page-block-content-4 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(4);
+  }
+}
+
+.app-page-block-content-5 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(5);
+  }
+}
+
+.app-page-block-content-6 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(6);
+  }
+}
+
+.app-page-block-content-7 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(7);
+  }
+}
+
+.app-page-block-content-8 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(8);
+  }
+}
+
+.app-page-block-content-9 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(9);
+  }
+}
+
+.app-page-block-content-10 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(10);
+  }
+}
+
+.app-page-block-content-11 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(11);
+  }
+}
+
+.app-page-block-content-12 {
+  @include make-col(12);
+    padding: 1rem;
+  @include media-breakpoint-up(sm) {
+    @include make-col(12);
+  }
+}

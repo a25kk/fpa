@@ -1,0 +1,94 @@
+// Footer
+
+.app-footer {
+    a {
+        color: #fff;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li:before {
+        content: "• ";
+        display: inline;
+    }
+}
+
+.app-footer-content {
+    //background: url("../assets/img/top.jpg") center center $app-primary;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#142f66+0,9e050e+99 */
+background: #142f66; /* Old browsers */
+background: -moz-linear-gradient(left,  #142f66 0%, #9e050e 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #142f66 0%,#9e050e 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #142f66 0%,#9e050e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#142f66', endColorstr='#9e050e',GradientType=1 ); /* IE6-9 */
+
+    min-height: 400px;
+    color: #fff;
+    font-size: $font-size-sm;
+    .app-coporate-logo {
+        padding-right: 10rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.app-footer-cards-wrapper {
+    @extend .container;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.app-footer-cards {
+    @include make-row();
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+// Footer Cards
+
+.app-footer-card {
+    @include make-col(12);
+    @include media-breakpoint-up(lg) {
+        @include make-col(4);
+        padding: .5rem;
+    }
+}
+
+.app-footer-header {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.app-footer-link {
+    color: #fff;
+    &:hover {
+        color: darken(#fff, 6.5%);
+    }
+}
+
+.app-copyright-wrapper {
+    @include make-container();
+    @include make-container-max-widths();
+}
+
+.app-copyright {
+    @include make-row();
+    padding: 2rem;
+    font-weight: 500;
+}
+
+.app-copyright-logo {
+    @include make-col(12);
+    @include media-breakpoint-up(sm) {
+        @include make-col(3);
+    }
+}
+
+.app-copyright-info {
+    @include make-col(12);
+    @include media-breakpoint-up(sm) {
+        @include make-col(9);
+        text-align: right;
+        padding-top: 1rem;
+    }
+}

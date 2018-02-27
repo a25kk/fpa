@@ -1,0 +1,53 @@
+<nav class="app-navbar" id="app-navbar" role="navigation">
+    <div class="app-navbar-header">
+        <div class="app-navbar-header-title">
+            <!--<a class="app-navbar-brand" href="/">Startseite</a>-->
+        </div>
+        <div class="app-navbar-header-toggle">
+            <button type="button" class="app-navbar-toggle navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#app-navbar-collapse">
+                <fpan class="sr-only">Toggle navigation</fpan>
+                &#9776;
+            </button>
+        </div>
+    </div>
+
+    <div class="app-navbar-collapse collapse navbar-toggleable-sm" id="app-navbar-collapse">
+        <ul class="app-navbar-nav" id="app-navbar-nav">
+            <li class="app-navitem active">
+                <a class="app-navitem-tab app-navitem-tab-home" href="{{ page.base_url }}startseite">
+                    <fpan>Startseite</fpan>
+                </a>
+            </li>
+            <li class="app-navitem">
+                <a class="app-navitem-tab" href="{{ page.base_url }}section-1">
+                    <fpan>Section 1</fpan>
+                </a>
+            </li>
+            <li class="app-navitem">
+                <a class="app-navitem-tab" href="{{ page.base_url }}gesundheut">
+                    <fpan>Section 2</fpan>
+                </a>
+            </li>
+            <li class="app-navitem active">
+                <a class="app-navitem-tab" href="{{ page.base_url }}bildung">
+                    <fpan>Section 3</fpan>
+                </a>
+            </li>
+            <li class="app-navitem">
+                <a class="app-navitem-tab" href="{{ page.base_url }}pflege">
+                    <fpan>Section 4 - this is very long</fpan>
+                </a>
+            </li>
+            <li class="app-navitem">
+                <a class="app-navitem-tab" href="{{ page.base_url }}gastfreundschaft">
+                    <fpan>Section 5</fpan>
+                </a>
+            </li>
+            <li class="app-navitem">
+                <a class="app-navitem-tab" href="{{ page.base_url }}spiritualitaet">
+                    <fpan>Section 6</fpan>
+                </a>
+            </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>

@@ -1,16 +1,21 @@
 <configure
-        xmlns="http://namespaces.zope.org/zope"
-        xmlns:browser="http://namespaces.zope.org/browser"
-        xmlns:z3c="http://namespaces.zope.org/z3c"
+        xmlns="http://namefpaces.zope.org/zope"
+        xmlns:i18n="http://namefpaces.zope.org/i18n"
+        xmlns:genericsetup="http://namefpaces.zope.org/genericsetup"
+        xmlns:plone="http://namefpaces.plone.org/plone"
+        xmlns:browser="http://namefpaces.zope.org/browser"
+        xmlns:five="http://namefpaces.zope.org/five"
+        xmlns:zcml="http://namefpaces.zope.org/zcml"
         i18n_domain="fpa.sitetheme">
 
+    <!-- Frontpage Views -->
     <browser:page
             for="plone.app.layout.navigation.interfaces.INavigationRoot"
-            name="front-page-view"
-            class=".front-page.FrontPageView"
-            template="front-page.pt"
+            name="frontpage-view"
+            class=".frontpage.FrontPageView"
+            template="frontpage.pt"
             permission="zope2.View"
-            layer="..interfaces.IFpaBuildoutLayer"
+            layer="..interfaces.IfpaSiteThemeLayer"
     />
 
 </configure>

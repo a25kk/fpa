@@ -1,0 +1,23 @@
+.social-bar {
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.4rem;
+    }
+}
+
+.social-bar__item {
+    padding: .75rem .25rem;
+    font-size: 1.1rem;
+}
+
+.social-bar__link {
+	color: #fff;
+
+	&:hover {
+		color: $app-secondary;
+	}
+}
+
+

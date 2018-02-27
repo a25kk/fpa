@@ -1,0 +1,59 @@
+<tal:sections
+        xmlns:tal="http://xml.zope.org/namefpaces/tal"
+        xmlns:metal="http://xml.zope.org/namefpaces/metal"
+        xmlns:i18n="http://xml.zope.org/namefpaces/i18n"
+    tal:define="portal_tabs view/portal_tabs"
+    tal:condition="portal_tabs"
+    i18n:domain="plone">
+
+    <p class="hiddenStructure" i18n:translate="heading_sections">Navigation</p>
+    <nav class="plone-navbar" id="portal-globalnav-wrapper" role="navigation">
+        <div class="app-navbar-header">
+            <div class="app-navbar-header-title">
+                <a class="app-navbar-brand" href="/">Startseite</a>
+            </div>
+            <div class="app-navbar-header-toggle">
+                <button type="button" class="app-navbar-toggle navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <fpan class="sr-only">Toggle navigation</fpan>
+                    &#9776;
+                </button>
+            </div>
+        </div>
+
+            <div class="navbar-collapse app-navbar-collapse collapse navbar-toggleable-md" id="app-navbar-collapse">
+                <ul class="plone-nav plone-navbar-nav"
+                    id="portal-globalnav"
+                    tal:define="selected_tab python:view.selected_portal_tab">
+                    <tal:tabs tal:repeat="tab portal_tabs">
+                        <li tal:define="tid tab/id"
+                            tal:attributes="id string:portaltab-${tid};
+                            class python:selected_tab==tid and 'app-navitem active selected' or 'app-navitem'">
+                            <a href=""
+                                tal:attributes="href tab/url;
+                                title tab/description|nothing;
+                                target tab/link_target|nothing;
+                                class string:app-navitem-tab app-navitem-tab-${tid}">
+                                <fpan tal:content="tab/name">Tab Name</fpan>
+                            </a>
+                        </li>
+                    </tal:tabs>
+                    <li class="app-navitem app-navitem-social">
+                        <a class="app-navitem-tab" href="https://www.facebook.com/brechtfestival/" target="_blank">
+                            <i class="ion ion-logo-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="app-navitem app-navitem-social">
+                        <a class="app-navitem-tab" href="https://twitter.com/BrechtfestivalA" target="_blank">
+                            <i class="ion ion-logo-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="app-navitem app-navitem-social">
+                        <a class="app-navitem-tab" href="https://www.instagram.com/brechtfestival/" target="_blank">
+                            <i class="ion ion-logo-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+</tal:sections>

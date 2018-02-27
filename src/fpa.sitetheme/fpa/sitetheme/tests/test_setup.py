@@ -24,7 +24,7 @@ class TestInstall(IntegrationTestCase):
 
     # browserlayer.xml
     def test_browserlayer(self):
-        """Test that IFpaBuildoutLayer is registered."""
-        from fpa.buildout.interfaces import IFpaBuildoutLayer
+        """Test that IfpaBuildoutLayer is registered."""
+        from fpa.buildout.interfaces import IfpaBuildoutLayer
         from plone.browserlayer import utils
-        self.failUnless(IFpaBuildoutLayer in utils.registered_layers())
+        self.failUnless(IfpaBuildoutLayer in utils.registered_layers())
