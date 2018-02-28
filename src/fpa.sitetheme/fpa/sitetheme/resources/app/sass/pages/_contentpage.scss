@@ -27,20 +27,21 @@
 }
 
 .app-page__title,
-.app-page-title {
+.app-page-title,
+.app-page-headline,
+.app-page__headline {
     color: $app-primary;
     margin-bottom: 1rem;
-    h1 {
-      font-size: 1.3rem;
-    }
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
     @include media-breakpoint-up(md) {
       h1 {
-      font-size: 2rem;
+      //font-size: 2rem;
       }
     }
 
     @include when-inside('.template-frontpage-view') {
-      text-align: center;
     }
 }
 
@@ -138,6 +139,7 @@
 
 .app-page-block {
   @include make-row();
+  padding: 0 1rem;
 }
 
 .app-page-block-content-1 {
@@ -166,7 +168,7 @@
 
 .app-page-block-content-4 {
   @include make-col(12);
-    padding: 1rem;
+    //padding: 1rem;
   @include media-breakpoint-up(sm) {
     @include make-col(4);
   }
@@ -198,7 +200,7 @@
 
 .app-page-block-content-8 {
   @include make-col(12);
-    padding: 1rem;
+    //padding: 1rem;
   @include media-breakpoint-up(sm) {
     @include make-col(8);
   }

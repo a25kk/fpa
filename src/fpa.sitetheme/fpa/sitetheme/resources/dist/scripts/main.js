@@ -15,15 +15,6 @@ if (typeof a25 == 'undefined') {
     var a25 = {};
 }
 
-$(window).scroll(function () {
-      if ($(this).scrollTop() > 0) {
-          $('.app-brandname-logo').addClass("logo-scale");
-      } else {
-        $('.app-brandname-logo').removeClass("logo-scale");
-      }
-  });
-
-
 // Trigger font face observer protection
 var fontPrimary = new FontFaceObserver('Open Sans');
 var fontSecondary = new FontFaceObserver('Kaushan Script');

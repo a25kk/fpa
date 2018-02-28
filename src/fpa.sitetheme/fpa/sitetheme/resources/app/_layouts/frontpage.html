@@ -10,9 +10,9 @@
     {% include layout/header.html %}
 
     <main class="app-main" role="main">
+        {% include components/intro.html %}
         {% include components/newspanel.html %}
         {{ content }}
-        {% include components/newsletter.html %}
     </main>
     {% include layout/footer.html %}
     {% include base/javascript.html %}

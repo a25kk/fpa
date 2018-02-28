@@ -22660,6 +22660,8 @@ div.riform .label
 
     overflow: hidden;
 
+    border-top: 1rem solid #fff;
+    border-bottom: 1rem solid #fff;
     background: #e9ecef;
 }
 @media (min-width: 768px)
@@ -24530,7 +24532,6 @@ body.template-frontpage-view .app-pathbar
     transition: right .5s linear; 
     pointer-events: all;
 
-    border-top: 10px solid #212529;
     background-color: #fff;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .25), 0 .65rem .65rem rgba(0, 0, 0, .22);
 }
@@ -24539,6 +24540,8 @@ body.template-frontpage-view .app-pathbar
     .app-nav-bar--overlay
     {
         width: 50vw;
+
+        background-color: none;
     }
 }
 @media (min-width: 992px)
@@ -24576,7 +24579,6 @@ body.template-frontpage-view .app-pathbar
 
 .app-nav-bar__title
 {
-    font-family: Raleway;
     font-size: 1.25rem; 
 
     width: 100%;
@@ -24593,8 +24595,8 @@ body.template-frontpage-view .app-pathbar
     width: 4rem;
 
     color: #fff; 
-    border: 1px solid tranfparent;
-    background: tranfparent;
+    border: 1px solid transparent;
+    background: transparent;
 
     -ms-flex-item-align: end;
     align-self: flex-end;
@@ -24617,19 +24619,19 @@ body.template-frontpage-view .app-pathbar
         display: flex;
             flex-direction: row;
 
-        margin-top: 1.5rem;
+        margin-top: 4.4rem;
         margin-bottom: 0;
         padding-left: .5rem;
 
-        background-color: tranfparent; 
+        background-color: transparent; 
 
         -ms-flex-direction: row;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         -ms-flex-align: center;
         align-items: center;
-        -ms-flex-pack: fpace-between;
-        justify-content: fpace-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
 }
 .app-nav--level-1
@@ -24702,39 +24704,11 @@ body.template-frontpage-view .app-pathbar
     position: relative;
 }
 
-@keyframes swing
-{
-    15%
-    {
-        transform: translateX(5px);
-    }
-    30%
-    {
-        transform: translateX(-5px);
-    }
-    50%
-    {
-        transform: translateX(3px);
-    }
-    65%
-    {
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        transform: translateX(2px);
-    }
-    100%
-    {
-        transform: translateX(0);
-    }
-}
-
 .app-nav__link
 {
     font-family: 'Open Sans';
     font-size: 1.5rem; 
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1;
 
     display: block;
@@ -24743,24 +24717,22 @@ body.template-frontpage-view .app-pathbar
     text-decoration: none;
     text-transform: uppercase;
 
-    color: #fff;
+    color: #4d4d4d;
 }
 .app-nav__link:hover
 {
-    animation: swing 1s ease;
-    animation-iteration-count: 1; 
     text-decoration: none;
 
-    color: red;
-    background: tranfparent;
+    color: #e75113; 
+    background: transparent;
 }
 .app-nav__link--active,
 .app-nav__link--open
 {
     text-decoration: none;
 
-    color: red; 
-    background: tranfparent;
+    color: #e75113; 
+    background: transparent;
 }
 .app-nav--level-1 .app-nav__link:after
 {
@@ -24925,7 +24897,6 @@ body.template-frontpage-view .app-pathbar
 
 .app-bannerbar
 {
-    margin-top: 0; 
     padding-top: 0;
 }
 
@@ -24942,7 +24913,7 @@ body.template-frontpage-view .app-pathbar
 {
     .app-banner
     {
-        height: 86vh; 
+        height: 65vh; 
         margin-bottom: 1rem;
         margin-left: auto;
         margin-left: auto;
@@ -24955,11 +24926,9 @@ body.template-frontpage-view .app-pathbar
     position: relative;
 
     width: 100%;
-    height: 86vh;
+    height: 65vh;
 
-    text-align: center; 
-
-    background-position: top center;
+    background-position: top center; 
     background-size: cover !important;
 }
 
@@ -25036,7 +25005,6 @@ body.template-frontpage-view .app-pathbar
 .app-baner-item-title,
 .app-banner-item-headline
 {
-    font-family: 'Kaushan Script', cursive; 
     font-size: 1.2rem;
 }
 @media (min-width: 576px)
@@ -25044,7 +25012,8 @@ body.template-frontpage-view .app-pathbar
     .app-baner-item-title,
     .app-banner-item-headline
     {
-        font-size: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
     }
 }
 
@@ -25070,7 +25039,7 @@ body.template-frontpage-view .app-pathbar
 /* ---- flickity overrides ---- */
 .flickity-prev-next-button
 {
-    background: tranfparent;
+    background: transparent;
 }
 
 .flickity-prev-next-button.previous
@@ -26503,30 +26472,18 @@ body.template-frontpage-view .app-pathbar
 }
 
 .app-page__title,
-.app-page-title
+.app-page-title,
+.app-page-headline,
+.app-page__headline
 {
-    margin-bottom: 1rem; 
+    font-size: 1.8rem;
+    font-weight: 700; 
+
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
 
     color: #e75113;
-}
-.app-page__title h1,
-.app-page-title h1
-{
-    font-size: 1.3rem;
-}
-@media (min-width: 768px)
-{
-    .app-page__title h1,
-    .app-page-title h1
-    {
-        font-size: 2rem;
-    }
-}
-.template-frontpage-view .app-page__title,
-.template-frontpage-view
-  .app-page-title
-{
-    text-align: center;
 }
 
 .app-page__abstract
@@ -26674,7 +26631,8 @@ body.template-frontpage-view .app-pathbar
     display: flex;
 
     margin-right: -15px;
-    margin-left: -15px; 
+    margin-left: -15px;
+    padding: 0 1rem; 
 
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -26739,8 +26697,7 @@ body.template-frontpage-view .app-pathbar
 
 .app-page-block-content-4
 {
-    max-width: 100%;
-    padding: 1rem; 
+    max-width: 100%; 
 
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -26815,8 +26772,7 @@ body.template-frontpage-view .app-pathbar
 
 .app-page-block-content-8
 {
-    max-width: 100%;
-    padding: 1rem; 
+    max-width: 100%; 
 
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -27736,8 +27692,9 @@ body.template-frontpage-view .app-pathbar
 {
     .app-intro
     {
-        margin-top: 2rem; 
+        margin-top: 2rem;
         margin-bottom: 2rem;
+        padding: 1rem;
     }
 }
 
@@ -27799,11 +27756,11 @@ body.template-frontpage-view .app-pathbar
 {
     .app-intro-right
     {
-        max-width: 100%;
+        max-width: 66.6666666667%;
         padding: 0; 
 
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+        -ms-flex: 0 0 66.6666666667%;
+            flex: 0 0 66.6666666667%;
     }
 }
 .app-intro-right .app-intro-right-content

@@ -5,7 +5,6 @@
 //** Fullscreen container bar
 .app-bannerbar {
     padding-top: 0;
-    margin-top: 0;
     @include when-inside('.template-frontpage-view') {
         @include media-breakpoint-up(md) {
         //margin-top: -215px;
@@ -22,7 +21,7 @@
         margin-left: auto;
         margin-left: auto;
         margin-bottom: 1rem;
-        height:86vh;
+        height:65vh;
         }
 }
 
@@ -36,11 +35,10 @@
 //## content and a lazyloaded background image
 .app-banner-item {
     position: relative;
-    height:86vh;
+    height:65vh;
     width: 100%;
     background-size: cover !important;
     background-position: top center;
-    text-align: center;
 }
 
 .app-banner-item-content {
@@ -72,9 +70,9 @@
 .app-baner-item-title,
 .app-banner-item-headline {
     font-size: 1.2rem;
-    font-family: 'Kaushan Script', cursive;
         @include media-breakpoint-up(sm) {
-        font-size: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
     }
 }
 
@@ -97,7 +95,7 @@
 /* ---- flickity overrides ---- */
 
 .flickity-prev-next-button {
-    background: tranfparent;
+    background: transparent;
 }
 
 .flickity-prev-next-button.previous {
