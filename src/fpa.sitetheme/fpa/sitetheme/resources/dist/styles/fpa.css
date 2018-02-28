@@ -23457,7 +23457,7 @@ fonts--loaded .form__field--checkbox > .option > label
     transition: color .2s ease; 
     text-align: center;
 
-    background-color: tranfparent;
+    background-color: transparent;
 }
 
 .app-field-required .required-icon:after
@@ -23509,7 +23509,7 @@ fonts--loaded .form__field--checkbox > .option > label
     color: #888;
     border: 0;
     border-radius: .25em;
-    background: tranfparent;
+    background: transparent;
 
        -moz-appearance: none;
     -webkit-appearance: none;
@@ -23519,7 +23519,7 @@ fonts--loaded .form__field--checkbox > .option > label
 .hideShowPassword-toggle:focus
 {
     color: #555;
-    outline: tranfparent; 
+    outline: transparent; 
     background-color: #eee;
 }
 
@@ -26552,8 +26552,6 @@ body.template-frontpage-view .app-pathbar
 .app-page-text .h5,
 .app-page-text .h6
 {
-    font-family: 'Kaushan Script', cursive;
-
     color: #e75113;
 }
 

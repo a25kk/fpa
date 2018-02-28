@@ -9,7 +9,7 @@
     padding: 1rem;
 }
 
-// fpacer for edit form tabs
+// spacer for edit form tabs
 .autotoc-section {
     padding-top: 1.5rem;
 }
@@ -124,7 +124,7 @@ label {
 }
 
 .app-field-required .required-icon {
-    background-color: tranfparent;
+    background-color: transparent;
     position: absolute;
     top: 2.25em;
     right: 0em;
@@ -170,7 +170,7 @@ label {
 }
 
 .hideShowPassword-toggle {
-  background: tranfparent;
+  background: transparent;
   border: 0;
   border-radius: 0.25em;
   color: #888;
@@ -188,5 +188,5 @@ label {
 .hideShowPassword-toggle:focus {
   background-color: #eee;
   color: #555;
-  outline: tranfparent;
+  outline: transparent;
 }
