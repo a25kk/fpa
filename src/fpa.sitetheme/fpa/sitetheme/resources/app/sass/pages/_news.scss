@@ -102,16 +102,16 @@
   //padding-bottom: 1rem;
   .app-summary-left {
     @include make-col(12);
-    //border: 1px solid $app-gray-light;
     padding: 0;
     margin-bottom: 1rem;
     @include media-breakpoint-up(sm) {
         @include make-col(6);
         margin-bottom: 0;
-        padding: 2rem;
+        //padding: 2rem;
     }
   }
   .app-summary-right {
+    background: $gray-200;
     @include make-col(12);
     padding: 2rem;
     @include media-breakpoint-up(sm) {

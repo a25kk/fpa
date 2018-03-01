@@ -25203,7 +25203,7 @@ body.template-frontpage-view .app-pathbar
 {
     transition: all .2s linear;
 
-    background: #faba00;
+    background: #4d4d4d;
 }
 .app-card__figure a:hover .app-figure__content
 {
@@ -25748,9 +25748,10 @@ body.template-frontpage-view .app-pathbar
     display: -ms-flexbox;
     display: flex;
 
-    margin-top: 5px; 
+    margin-top: 1rem;
     margin-right: -15px;
     margin-right: -10px;
+    margin-bottom: 1rem; 
     margin-left: -15px;
     margin-left: -10px;
 
@@ -26492,7 +26493,7 @@ body.template-frontpage-view .app-pathbar
     font-weight: 400;
 }
 
-.subsection-kuenstler .app-page .app-page-body
+.section-aktuelles .app-page .app-page-body
 {
     display: -ms-flexbox;
     display: flex;
@@ -26507,7 +26508,7 @@ body.template-frontpage-view .app-pathbar
 
 @media (min-width: 576px)
 {
-    .subsection-kuenstler .app-page .app-page-gallery
+    .section-aktuelles .app-page .app-page-gallery
     {
         max-width: 50%; 
 
@@ -26518,7 +26519,7 @@ body.template-frontpage-view .app-pathbar
 
 @media (min-width: 576px)
 {
-    .subsection-kuenstler .app-page .app-page-leadimage
+    .section-aktuelles .app-page .app-page-leadimage
     {
         max-width: 50%; 
 
@@ -26529,7 +26530,7 @@ body.template-frontpage-view .app-pathbar
 
 @media (min-width: 576px)
 {
-    .subsection-kuenstler .app-page .app-page-text
+    .section-aktuelles .app-page .app-page-text
     {
         max-width: 50%;
         padding: 0 2rem; 
@@ -26553,6 +26554,32 @@ body.template-frontpage-view .app-pathbar
 .app-page-text .h6
 {
     color: #e75113;
+}
+
+.app-page-text ul
+{
+    padding-left: 0; 
+
+    list-style: none;
+}
+
+.app-page-text ol
+{
+    padding-left: 0;
+
+    list-style-position: inside;
+}
+
+.app-page-text li:before
+{
+    display: inline; 
+
+    content: '• ';
+}
+
+.app-page-text a
+{
+    font-weight: 700;
 }
 
 .app-page-leadimage
@@ -27039,8 +27066,7 @@ body.template-frontpage-view .app-pathbar
     .app-summary-wrapper .app-summary-left
     {
         max-width: 50%;
-        margin-bottom: 0;
-        padding: 2rem; 
+        margin-bottom: 0; 
 
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
@@ -27050,6 +27076,8 @@ body.template-frontpage-view .app-pathbar
 {
     max-width: 100%;
     padding: 2rem; 
+
+    background: #e9ecef;
 
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -27711,10 +27739,10 @@ body.template-frontpage-view .app-pathbar
     {
         display: block; 
 
-        max-width: 33.3333333333%;
+        max-width: 50%;
 
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     }
 }
 .app-intro-left .app-intro-left-content
@@ -27754,11 +27782,11 @@ body.template-frontpage-view .app-pathbar
 {
     .app-intro-right
     {
-        max-width: 66.6666666667%;
+        max-width: 50%;
         padding: 0; 
 
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     }
 }
 .app-intro-right .app-intro-right-content

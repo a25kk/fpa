@@ -81,7 +81,7 @@
 	@include make-col(12);
 	display: none;
 	@include media-breakpoint-up(xl) {
-		@include make-col(4);
+		@include make-col(6);
 		display: block;
 	}
 	.app-intro-left-content {
@@ -105,7 +105,7 @@
 		padding: 1rem;
 	}
 	@include media-breakpoint-up(xl) {
-		@include make-col(8);
+		@include make-col(6);
 		padding: 0;
 	}
 	.app-intro-right-content {

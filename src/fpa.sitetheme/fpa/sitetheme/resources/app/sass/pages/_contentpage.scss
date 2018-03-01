@@ -52,7 +52,7 @@
 
 .app-page {
 
-@include when-inside('.subsection-kuenstler') {
+@include when-inside('.section-aktuelles') {
   .app-page-body {
     @include make-row();
     padding: 1rem;
@@ -80,11 +80,25 @@
 
 }
 
-
 .app-page-text {
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: $app-primary;
   }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        }
+    ol {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    li:before {
+        content: "• ";
+        display: inline;
+    }
+    a {
+        font-weight: 700;
+    }
 }
 
 
