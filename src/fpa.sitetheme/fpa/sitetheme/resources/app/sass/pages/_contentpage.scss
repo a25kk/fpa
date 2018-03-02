@@ -153,11 +153,14 @@
 .app-page-block {
   @include make-row();
   padding: 0 1rem;
+  border-bottom: 1px solid $gray-200;
+  font-size: 80%;
+  margin-bottom: 1rem;
 }
 
 .app-page-block-content-1 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(1);
   }
@@ -165,7 +168,7 @@
 
 .app-page-block-content-2 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(2);
   }
@@ -173,7 +176,7 @@
 
 .app-page-block-content-3 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(3);
   }
@@ -181,7 +184,7 @@
 
 .app-page-block-content-4 {
   @include make-col(12);
-    //padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(4);
   }
@@ -189,7 +192,7 @@
 
 .app-page-block-content-5 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(5);
   }
@@ -197,7 +200,7 @@
 
 .app-page-block-content-6 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(6);
   }
@@ -205,7 +208,7 @@
 
 .app-page-block-content-7 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(7);
   }
@@ -213,7 +216,7 @@
 
 .app-page-block-content-8 {
   @include make-col(12);
-    //padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(8);
   }
@@ -221,7 +224,7 @@
 
 .app-page-block-content-9 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(9);
   }
@@ -229,7 +232,7 @@
 
 .app-page-block-content-10 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(10);
   }
@@ -237,7 +240,7 @@
 
 .app-page-block-content-11 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(11);
   }
@@ -245,7 +248,7 @@
 
 .app-page-block-content-12 {
   @include make-col(12);
-    padding: 1rem;
+    padding: 1rem 0;
   @include media-breakpoint-up(sm) {
     @include make-col(12);
   }
