@@ -154,8 +154,12 @@
   @include make-row();
   padding: 0 1rem;
   border-bottom: 1px solid $gray-200;
-  font-size: 80%;
+  font-size: .8rem;
   margin-bottom: 1rem;
+  @include when-inside('.app-footer-card') {
+    border-bottom: none;
+    font-size: 1rem;
+  }
 }
 
 .app-page-block-content-1 {
@@ -185,6 +189,9 @@
 .app-page-block-content-4 {
   @include make-col(12);
     padding: 1rem 0;
+    @include when-inside('.app-footer-card') {
+      padding: 0;
+    }
   @include media-breakpoint-up(sm) {
     @include make-col(4);
   }
@@ -217,6 +224,9 @@
 .app-page-block-content-8 {
   @include make-col(12);
     padding: 1rem 0;
+    @include when-inside('.app-footer-card') {
+      padding: 0;
+    }
   @include media-breakpoint-up(sm) {
     @include make-col(8);
   }
