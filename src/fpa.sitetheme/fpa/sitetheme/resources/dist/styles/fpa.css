@@ -26489,6 +26489,18 @@ body.template-frontpage-view .app-pathbar
     color: #e75113;
 }
 
+.app-intro .app-page-headline
+{
+    padding-left: 1rem;
+}
+@media (min-width: 768px)
+{
+    .app-intro .app-page-headline
+    {
+        padding-left: 0;
+    }
+}
+
 .app-page__abstract
 {
     font-size: 1.1rem;

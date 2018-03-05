@@ -35,16 +35,18 @@
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: 700;
-    @include media-breakpoint-up(md) {
-      h1 {
-      //font-size: 2rem;
-      }
-    }
-
-    @include when-inside('.template-frontpage-view') {
-    }
 }
+    
 
+
+.app-page-headline {
+  @include when-inside('.app-intro') {
+    padding-left: 1rem;
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+    }
+  }
+}
 .app-page__abstract {
     font-size: 1.1rem;
     font-weight: 400;
