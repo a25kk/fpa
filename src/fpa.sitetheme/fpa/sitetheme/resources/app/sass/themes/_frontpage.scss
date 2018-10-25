@@ -79,10 +79,8 @@
 
 .app-intro-left {
 	@include make-col(12);
-	display: none;
 	@include media-breakpoint-up(xl) {
 		@include make-col(6);
-		display: block;
 	}
 	.app-intro-left-content {
 		padding: 0;
@@ -109,7 +107,7 @@
 		padding: 0;
 	}
 	.app-intro-right-content {
-		background: $app-gray-light;
+		background: $gray-200;
 		padding: 1rem;
 	}
 }

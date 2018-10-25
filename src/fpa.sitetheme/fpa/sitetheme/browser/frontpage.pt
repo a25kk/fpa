@@ -10,6 +10,40 @@
 <metal:main fill-slot="main">
     <metal:content-core define-macro="main">
         <div class="app-front-page" id="app-front-page">
+            <div class="app-intro" id="app-intro">
+    <div class="app-page__header">
+        <div class="app-page__title">
+            <h1 class="app-page-headline">Herzlich Willkommen in unserer Praxis im Zentrum von Augsburg.</h1>
+        </div>
+    </div>
+    <div class="app-intro-left">
+        <div class="app-intro-left-content">
+            <img class="image-inline" src="assets/images/intro.jpg" />
+        </div>
+    </div>
+        <div class="app-intro-right">
+            <div class="app-intro-right-content">
+
+                <p>Eine gute Beratung unserer Patientinnen ist uns genauso wichtig wie eine lebensbegleitende Betreuung, Versorgung und Prävention Ihrer Gesundheit.</p>
+
+                <p>Es erwartet Sie eine medizinische und persönliche Umsorgung höchster Qualität in freundlicher Atmosphäre.</p>
+
+                <p>Um den vielfältigen Wünschen unserer Patientinnen entsprechen zu können, bieten wir Ihnen das gesamte gynäkologische und geburtshilfliche Untersuchungsspektrum an.</p>
+
+                <p>Wir betreuen sehr gerne Schwangerschaften und arbeiten bei der Schwangerschaftsbetreuung mit den Pränatalzentren in der Umgebung vertrauensvoll zusammen.</p>
+
+                <p>Auch im präventiven Bereich beraten wir Sie umfassend und können in unseren Spezialsprechstunden ganz besonders auf Ihre Bedürfnisse eingehen.</p>
+
+                <p>Wir freuen uns auf Sie,</p>
+
+                <p>Ihre Dr. Katharina Anstett, Dr. Marion K. Schäfer &amp; Ihr Frauenarztpraxisteam in Augsburg</p>
+            </div>
+        </div>
+</div>
+
+        <div class="app-page__title">
+            <h1 class="app-page-headline">Aktuelles</h1>
+        </div>
             <div class="app-page-body app-page__teasers" id="front-page-teasers">
                 <tal:block tal:condition="view/has_preview_cards">
                     <div class="app-teaser-boxes" tal:define="preview_cards python:view.cards(search_limit=3)">
