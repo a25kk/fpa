@@ -16510,7 +16510,7 @@ body.template-frontpage-view .app-pathbar {
 
 .app-nav-bar {
   position: relative;
-  right: -100%;
+  right: -120%;
 }
 
 .app-nav-bar--overlay {
@@ -16820,6 +16820,7 @@ body.template-frontpage-view .app-pathbar {
   margin-bottom: 2rem;
   background: #fff;
   width: 100%;
+  height: 40vh;
 }
 
 @media (min-width: 768px) {
@@ -16827,17 +16828,23 @@ body.template-frontpage-view .app-pathbar {
     margin-left: auto;
     margin-left: auto;
     margin-bottom: 1rem;
-    height: 65vh;
+    height: 75vh;
   }
 }
 
 /* ---- Single banner item ---- */
 .app-banner-item {
   position: relative;
-  height: 65vh;
+  height: 40vh;
   width: 100%;
   background-size: cover !important;
   background-position: top center;
+}
+
+@media (min-width: 768px) {
+  .app-banner-item {
+    height: 75vh;
+  }
 }
 
 .app-banner-item-content {
