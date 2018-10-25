@@ -30,7 +30,7 @@ Thumbs.db
 *.esproj
 nbproject
 *.sublime-project
-*.sublime-workfpace
+*.sublime-workspace
 
 # Komodo
 *.komodoproject

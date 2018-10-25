@@ -75,9 +75,7 @@
     <theme href="dist/signin/index.html" css:if-content="body.template-mail_password_response" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_form" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_finish" />
-    <theme href="dist/frontpage/index.html" css:if-content="body.template-frontpage-view" />
-    <theme href="dist/partner/index.html" css:if-content="body.section-sponsoren" />
-    <theme href="dist/newsletter/index.html" css:if-content="body.section-newsletter" />
+    <theme href="dist/frontpage/index.html" css:if-content="body.template-front-page-view" />
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -93,17 +91,16 @@
         <drop css:content="meta[name='viewport']" />
         <before content="/html/head/meta" theme="/html/head/title" />
 
+        <!-- Add stylesheets and javascript -->
+        <before css:theme="head link[rel='stylesheet']"
+                content="/html/head/link"
+        />
         <after
-                content="/html/head/link | /html/head/style | /html/head/script"
+                content="/html/head/style | /html/head/script"
                 theme-children="/html/head"
         />
-
-        <rules css:if-content="body.userrole-authenticated">
-            <!-- Drop style tags from theme template -->
-            <drop theme="/html/head/style" />
-        </rules>
-
         <drop theme="/html/body/script" />
+
 
         <!-- Custom favicon implementation does automatically add
             favicons to the html head - we drop the Plone CMS specific implementation
@@ -268,7 +265,7 @@
         </rules>
 
         <!-- Drop cards -->
-        <drop css:if-not-content=".template-frontpage-view"
+        <drop css:if-not-content=".template-front-page-view"
                 css:theme="#app-front-page-cards" />
 
         <!-- Alert and portal messages -->
@@ -323,7 +320,7 @@
         </replace>
 
         <!-- Required marker -->
-        <replace css:content="fpan.required">
+        <replace css:content="span.required">
             <xsl:copy>
                 <xsl:copy-of select="@*" />
                 <xsl:attribute name="class"><xsl:value-of select="./@class" /> text--warning</xsl:attribute>
@@ -335,7 +332,7 @@
             <xsl:attribute name="class"><xsl:value-of select="." /> text--warning</xsl:attribute>
         </replace>
         <!-- Drop .label class for twbs compatibility -->
-        <drop content="//label/fpan[@class='label']/@class" />
+        <drop content="//label/span[@class='label']/@class" />
 
         <replace css:content=".field">
             <xsl:copy>
@@ -499,6 +496,11 @@
 
         <after css:theme-children="#app-page-contact"
                css:content-children="#app-contact-viewlet-cards" />
+
+        <!-- Support cookie consent -->
+        <after css:theme-children="#app-footer"
+               css:content="#cookie-consent"
+               css:if-content="#cookie-consent" />
 
     </rules>
 
