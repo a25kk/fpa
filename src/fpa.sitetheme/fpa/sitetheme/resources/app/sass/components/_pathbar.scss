@@ -17,7 +17,7 @@
         background-color: tranfparent;
         margin-bottom: 0;
         }
-    > * > fpan { //you are here
+    > * > span { //you are here
         display: inline-block;
         color: $gray-400;
         padding: 1rem 0 1rem 1rem;
@@ -34,7 +34,7 @@
         > li {
             font-weight: 300;
             display: inline-block;
-            line-height: 0; // match ol & fpan height
+            line-height: 0; // match ol & span height
             position: relative;
             padding: 0;
         + li:before {

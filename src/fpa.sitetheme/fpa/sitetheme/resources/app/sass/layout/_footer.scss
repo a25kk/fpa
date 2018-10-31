@@ -72,16 +72,18 @@
 
 .app-copyright-logo {
     @include make-col(12);
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
         @include make-col(3);
     }
 }
 
 .app-copyright-info {
     @include make-col(12);
-    @include media-breakpoint-up(sm) {
+    margin-top: 2rem;
+    @include media-breakpoint-up(md) {
         @include make-col(9);
         text-align: right;
         padding-top: 1rem;
+        margin-top: 0;
     }
 }

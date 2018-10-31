@@ -151,6 +151,7 @@ img[data-sizes="auto"] {
 
 .app-img {
     @extend .img-fluid;
+    width: 100%;
 }
 
 figcaption {
