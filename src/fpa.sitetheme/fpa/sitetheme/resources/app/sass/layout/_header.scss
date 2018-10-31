@@ -7,7 +7,7 @@
     border-top: 1rem solid #fff;
     border-bottom: 1rem solid #fff;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     background: $gray-200;
     @include media-breakpoint-up(md) {
         //border-bottom: .5rem solid $app-secondary;
