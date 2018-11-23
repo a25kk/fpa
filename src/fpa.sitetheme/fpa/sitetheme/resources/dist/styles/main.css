@@ -15527,8 +15527,8 @@ fonts--loaded .form__field--checkbox > .option > label {
 .plone-toolbar-logo:after {
   content: "";
   border-top: 4px solid #005880;
-  border-left: 4px solid tranfparent;
-  border-right: 4px solid tranfparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
   position: absolute;
   left: 25px;
   top: 50px;
@@ -15752,11 +15752,11 @@ fonts--loaded .form__field--checkbox > .option > label {
 
 .plone-toolbar-caret {
   border-left: 4px solid;
-  border-bottom: 4px solid tranfparent;
-  border-top: 4px solid tranfparent;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
   position: absolute;
   right: 0;
-  background: tranfparent !important;
+  background: transparent !important;
   margin-top: 0 !important;
   top: 21px;
   opacity: .67;
@@ -15815,7 +15815,7 @@ fonts--loaded .form__field--checkbox > .option > label {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border: 1px solid tranfparent;
+  border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -16136,7 +16136,7 @@ iframe {
   margin-top: 0;
   font-size: 0.875rem;
   border-radius: 0;
-  background-color: tranfparent;
+  background-color: transparent;
   padding-left: 0;
 }
 
@@ -16145,7 +16145,7 @@ iframe {
 }
 
 .app-pathbar .breadcrumb {
-  background-color: tranfparent;
+  background-color: transparent;
   margin-bottom: 0;
 }
 
@@ -16860,7 +16860,7 @@ body.template-frontpage-view .app-pathbar {
   height: 10rem;
   min-height: 10rem;
   padding: 1.5rem 1rem 1rem 2rem;
-  background-image: linear-gradient(to bottom, #000 0%, tranfparent 100%);
+  background-image: linear-gradient(to bottom, #000 0%, transparent 100%);
   background-repeat: repeat-x;
 }
 
@@ -17079,7 +17079,7 @@ body.template-frontpage-view .app-pathbar {
 
 .app-card-bg {
   position: relative;
-  background: tranfparent no-repeat scroll top center;
+  background: transparent no-repeat scroll top center;
   background-size: cover;
   overflow: hidden;
   min-height: 266px;
@@ -17139,7 +17139,7 @@ body.template-frontpage-view .app-pathbar {
   position: absolute;
   top: 0;
   left: 0;
-  background: tranfparent no-repeat scroll top center;
+  background: transparent no-repeat scroll top center;
   background-size: cover;
   width: 100%;
 }
@@ -17152,7 +17152,7 @@ body.template-frontpage-view .app-pathbar {
   width: auto;
   min-height: 6rem;
   text-transform: uppercase;
-  background-image: linear-gradient(to bottom, #333 0%, tranfparent 100%);
+  background-image: linear-gradient(to bottom, #333 0%, transparent 100%);
   background-repeat: repeat-x;
 }
 
@@ -17387,7 +17387,7 @@ body.template-frontpage-view .app-pathbar {
 
 .app-nav-tree {
   display: none;
-  background-color: tranfparent;
+  background-color: transparent;
   font-weight: 500;
 }
 
@@ -17499,7 +17499,7 @@ body.template-frontpage-view .app-pathbar {
 }
 
 .date-selector {
-  background: tranfparent;
+  background: transparent;
   padding-left: 0;
   list-style: none;
   margin-bottom: 0;
@@ -17884,7 +17884,7 @@ input[type="color"] {
 }
 
 .template-frontpage-view .app-page {
-  background: tranfparent;
+  background: transparent;
 }
 
 .app-page__title,

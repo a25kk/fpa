@@ -98,8 +98,8 @@ $plone-screen-lg-min:              1200px;
     &:after {
         content: "";
         border-top: 4px solid darken(#007bb3, 10%);
-        border-left: 4px solid tranfparent;
-        border-right: 4px solid tranfparent;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
         position: absolute;
         left: 25px;
         top:50px;
@@ -228,11 +228,11 @@ $plone-screen-lg-min:              1200px;
 }
 .plone-toolbar-caret {
     border-left: 4px solid;
-    border-bottom: 4px solid tranfparent;
-    border-top: 4px solid tranfparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
     position: absolute;
     right: 0;
-    background: tranfparent !important;
+    background: transparent !important;
     margin-top: 0 !important;
     top: 21px;
     opacity: .67;

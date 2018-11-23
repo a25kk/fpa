@@ -65,7 +65,7 @@
         height: 10rem;
         min-height: 10rem;
         padding: 1.5rem 1rem 1rem 2rem;
-        @include gradient-y(#000, tranfparent, 0%, 100%);
+        @include gradient-y(#000, transparent, 0%, 100%);
     }
 }
 
@@ -219,7 +219,7 @@ $card-title-fpacers: (
 //## Full background image and covering link
 .app-card-bg {
     position: relative;
-    background: tranfparent no-repeat scroll top center;
+    background: transparent no-repeat scroll top center;
     background-size: cover;
     overflow: hidden;
     min-height: 266px;
@@ -266,7 +266,7 @@ $card-title-fpacers: (
     position: absolute;
     top: 0;
     left: 0;
-    background: tranfparent no-repeat scroll top center;
+    background: transparent no-repeat scroll top center;
     background-size: cover;
     width: 100%;
     //min-height: 358px;
@@ -279,7 +279,7 @@ $card-title-fpacers: (
     width: auto;
     min-height: 6rem;
     text-transform: uppercase;
-    @include gradient-y(#333, tranfparent, 0%, 100%);
+    @include gradient-y(#333, transparent, 0%, 100%);
     &:before {
         content: "\203A";
         display: block;

@@ -5,7 +5,7 @@
 
 .app-nav-tree {
     display: none;
-    background-color: tranfparent;
+    background-color: transparent;
     font-weight: 500;
     @include media-breakpoint-up(lg) {
         display: block;

@@ -20,7 +20,7 @@
 }
 
 .date-selector {
-    background: tranfparent;
+    background: transparent;
     @include when-inside('.app-nav-list') {
         padding: .5rem;
     }
