@@ -18413,121 +18413,228 @@ input[type="color"] {
   text-transform: uppercase;
 }
 
-.event-calendar__day {
+.app-card-contact {
   margin-bottom: 1rem;
-  padding: 0;
 }
 
-.calender-day__header {
-  background: #000;
+.app-card-contact .app-card-header {
+  height: auto;
+  min-height: auto;
+  padding: .5rem;
+  background: #faba00;
+  font-size: 1rem !important;
   color: #fff;
-  padding: 1rem 1rem .5rem 1rem;
-  margin-bottom: .5rem;
+  font-weight: 700;
 }
 
-.calendar-day__events {
+.app-drz .app-card-contact .app-card-header {
+  background: #faba00;
+}
+
+.app-card-contact .app-page-abstract {
+  background: #e75113;
+  padding: .5rem;
+  font-size: .8rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.app-card-contact .app-card-content {
+  padding: 0;
+  color: #000;
+}
+
+.app-card-contact .app-card-content address {
+  margin-bottom: 0;
+}
+
+.app-card-contact .app-card-content-lead {
+  padding: 1rem !important;
+  background: #4d4d4d;
+}
+
+.app-card-contact .app-card-footer {
+  background: #eee;
+  padding: 1rem !important;
+}
+
+.app-card-contact .app-page-image-container {
+  margin-bottom: 0;
+}
+
+.app-card-contact a {
+  color: #fff;
+}
+
+.app-contact-position {
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.app-contact-block {
+  padding-top: 1rem;
+}
+
+.app-contact-phone {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.app-contact-phone:before {
+  content: "\f1e2";
+  font-family: "Ionicons";
+  padding-right: .7rem;
+}
+
+.app-contact-fax {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.app-contact-fax:before {
+  content: "\f1e2";
+  font-family: "Ionicons";
+  padding-right: .5rem;
+}
+
+.app-contact-email {
+  position: relative;
+  color: #fff;
+}
+
+.app-contact-email:before {
+  content: "\f1b7";
+  font-family: "Ionicons";
+  padding-right: .5rem;
+  color: #fff;
+}
+
+.template-contact-view .app-contact-position {
+  padding-left: 1rem;
+}
+
+.template-contact-view address {
+  padding-left: 1rem;
+}
+
+.app-contact-standalone .app-contact-position {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+.app-contact-standalone address {
+  padding-left: 1rem;
+}
+
+@media (min-width: 576px) {
+  .app-contact-viewlet-elements {
+    padding-left: 1rem;
+  }
+}
+
+.app-card-viewlet-item {
+  margin-bottom: 1rem;
+}
+
+.app-contact-element {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
-.calendar-day__event {
+.app-contact-element address {
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .app-contact-element {
+    padding-left: 0;
+  }
+}
+
+.app-contact-element-aside {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   max-width: 100%;
+  padding-right: 0;
 }
 
 @media (min-width: 576px) {
-  .calendar-day__event {
+  .app-contact-element-aside {
     -ms-flex: 0 0 33.3333333333%;
         flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 }
 
-.calendar-day__event-content {
-  padding: 1rem;
-}
-
-.event-card__cover {
-  margin-top: 1rem;
-  color: #dee2e6;
-  font-size: 0.875rem;
-}
-
-.event-card__header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.app-event {
-  border: 0px solid red;
-}
-
-.app-event__header {
-  border-top: 0.5rem solid #000;
-  padding-top: 1rem;
-}
-
-.app-page__timestamp {
-  font-family: "Open Sans";
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding-bottom: 1rem;
-}
-
-.app-page__location {
-  color: #4d4d4d;
-  padding-bottom: 1rem;
-}
-
-.app-page__media {
-  border-top: 0.5rem solid #000;
-  border-bottom: 0.5rem solid #000;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.app-page__figure {
+.app-contact-element-aside figure {
   margin-bottom: 0;
 }
 
-.app-page__figure figcaption {
-  padding-top: .5rem;
-  color: #4d4d4d;
-  font-size: .8rem;
+.app-contact-element-main {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
+  padding: 1rem;
+  background-color: #e9ecef;
 }
 
-.app-page__aside {
-  margin-bottom: 1rem;
+@media (min-width: 576px) {
+  .app-contact-element-main {
+    -ms-flex: 0 0 66.6666666667%;
+        flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
 }
 
-.app-page__actions {
-  border-top: 0.5rem solid #000;
+.app-contact-element-title {
+  padding-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.app-contact-element-block {
+  margin-bottom: 0;
+}
+
+.app-contact-element-block.app-contact-position {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.app-contact-rich-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.app-contact-rich-text li:before {
+  content: "• ";
+  display: inline;
+}
+
+.app-contact-element .app-contact-phone, .app-contact-element
+.app-contact-fax {
+  padding-left: 0;
+}
+
+.app-contact-element-media {
+  margin: 0;
+}
+
+.app-contact-actions {
   padding-top: 1rem;
 }
 
-.button__action-book {
-  font-family: Raleway;
-  text-transform: uppercase;
-  border-color: #4d4d4d;
-}
-
-.invisible {
-  display: none;
-  height: 0;
-}
-
-.event-card__title {
-  font-family: Raleway;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 700;
+.app-drz .app-btn-contact-card {
+  background: #faba00;
+  border-color: #faba00 !important;
 }
 
 .app-main {
