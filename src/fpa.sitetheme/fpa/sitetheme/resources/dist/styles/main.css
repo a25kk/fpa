@@ -15014,6 +15014,8 @@ div.riform .label {
   border-top: 1rem solid #fff;
   border-bottom: 1rem solid #fff;
   position: relative;
+  height: 100%;
+  min-height: 100%;
   overflow: hidden;
   background: #e9ecef;
 }
