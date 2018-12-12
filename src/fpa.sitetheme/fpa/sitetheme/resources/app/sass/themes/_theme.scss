@@ -74,19 +74,8 @@ $grid-item-sizes: (
     }
 }
 
-//.app-aside {
-//  flex: 0 0 100%;
-//    @include media-breakpoint-up(sm) {
-//        flex: 0 0 15rem;
-//        width: 15rem;
-//        padding: 1rem 1rem 1rem 0;
-//        &-inverse {
-//          position: absolute;
-//          top: 0;
-//          right: 0;
-//          border: 1px solid blue;
-//        }
-//    }
-//}
-
+.btn-primary {
+    background-color: $app-primary !important;
+    border-color: $app-primary !important;
+}
 

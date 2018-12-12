@@ -15322,6 +15322,10 @@ div.riform .label {
   }
 }
 
+.app-copyright-info a {
+  color: #e75113;
+}
+
 .form__group {
   margin-bottom: 1rem;
 }
@@ -18880,6 +18884,11 @@ input[type="color"] {
         flex: 0 0 100%;
     max-width: 100%;
   }
+}
+
+.btn-primary {
+  background-color: #e75113 !important;
+  border-color: #e75113 !important;
 }
 
 .app-frontpage {
